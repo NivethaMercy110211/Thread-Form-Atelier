@@ -1,0 +1,406 @@
+/* ============================================================
+   Thread & Form Atelier — forms.css
+   Contact, appointment, booking forms
+   ============================================================ */
+
+/* ---- Form Base ---- */
+.form-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-normal);
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 1.5;
+}
+
+.form-control::placeholder {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(38,60,53,0.12);
+}
+
+.form-control:focus::placeholder {
+  color: transparent;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background: #202622;
+  border-color: #2E3A35;
+  color: #F5EFE6;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #6a7a72;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  border-color: #AABBAF;
+  box-shadow: 0 0 0 3px rgba(170,187,175,0.15);
+}
+
+/* Textarea */
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Select arrow */
+.form-select-wrap {
+  position: relative;
+}
+
+.form-select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--color-muted);
+  pointer-events: none;
+}
+
+[dir="rtl"] .form-select-wrap::after {
+  right: auto;
+  left: 1rem;
+}
+
+/* ---- Radio / Checkbox Group ---- */
+.form-radio-group,
+.form-check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Inline radio label (label wrapping input) */
+.form-radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-body);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-radio-label input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Select chevron icon */
+.form-select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+[dir="rtl"] .form-select-arrow {
+  right: auto;
+  left: 1rem;
+}
+
+/* Textarea height alias */
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-radio-card {
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+}
+
+.form-radio-card input[type="radio"],
+.form-radio-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form-radio-card label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-body);
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.form-radio-card input:checked + label {
+  border-color: var(--color-primary);
+  background: rgba(38,60,53,0.07);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .form-radio-card input:checked + label {
+  border-color: #AABBAF;
+  background: rgba(170,187,175,0.1);
+  color: #AABBAF;
+}
+
+.form-radio-card label:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ---- Form Hint ---- */
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+/* ---- Form Row ---- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ---- Form Card (container) ---- */
+.form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+}
+
+[data-theme="dark"] .form-card {
+  background: var(--bg-card);
+  border-color: #2E3A35;
+}
+
+.form-card-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-heading);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.form-card-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ---- Form Divider ---- */
+.form-section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+[data-theme="dark"] .form-section-divider {
+  border-top-color: #2E3A35;
+}
+
+/* ---- Form Section Label ---- */
+.form-section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .form-section-label {
+  color: #AABBAF;
+}
+
+/* ---- Date / Time Input ---- */
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  appearance: none;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(38,60,53,0.12);
+}
+
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"] {
+  background: #202622;
+  border-color: #2E3A35;
+  color: #F5EFE6;
+  color-scheme: dark;
+}
+
+/* ---- Info Box ---- */
+.form-info-box {
+  background: rgba(38,60,53,0.06);
+  border: 1px solid rgba(38,60,53,0.15);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+[data-theme="dark"] .form-info-box {
+  background: rgba(170,187,175,0.07);
+  border-color: rgba(170,187,175,0.15);
+}
+
+.form-info-icon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+[data-theme="dark"] .form-info-icon {
+  color: #AABBAF;
+}
+
+.form-info-text {
+  font-size: 0.85rem;
+  color: var(--color-body);
+  line-height: 1.6;
+}
+
+/* ---- Studio Info Card ---- */
+.studio-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.studio-info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.studio-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(38,60,53,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .studio-info-icon {
+  background: rgba(170,187,175,0.1);
+  color: #AABBAF;
+}
+
+.studio-info-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.2rem;
+}
+
+.studio-info-value {
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  font-weight: 500;
+}
+
+/* ---- Responsive Forms ---- */
+@media (max-width: 767.98px) {
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-radio-group {
+    flex-direction: column;
+  }
+
+  .form-radio-card {
+    min-width: 0;
+  }
+}

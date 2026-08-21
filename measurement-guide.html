@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thread &amp; Form Atelier Measurements — Learn how to take your measurements correctly for women's and men's custom stitching. Includes diagrams and tips." />
+  <title>Measurements | Thread &amp; Form Atelier</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/banner.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <style>
+    .measure-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+      height: 100%;
+    }
+    .measure-step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .measure-step-num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--color-border);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .measure-point {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      height: 100%;
+    }
+
+    /* Innovative Measurement Guide Cards */
+    .guide-visual-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      height: 100%;
+      min-height: 520px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-border);
+    }
+
+    .guide-visual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform var(--transition-slow);
+    }
+
+    .guide-visual-card:hover .guide-visual-img {
+      transform: scale(1.04);
+    }
+
+    .guide-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(21, 25, 23, 0.15) 0%, rgba(21, 25, 23, 0.75) 100%);
+    }
+
+    .guide-badge-box {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      background: rgba(245, 239, 230, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-lg);
+      color: var(--color-heading);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    [data-theme="dark"] .guide-badge-box {
+      background: rgba(21, 25, 23, 0.88);
+      color: #F5EFE6;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .guide-badge-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    [data-theme="dark"] .guide-badge-tag {
+      color: #AABBAF;
+    }
+
+    .guide-badge-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .measure-grid-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.35rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .measure-grid-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .measure-grid-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .measure-grid-num {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: rgba(38, 60, 53, 0.08);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .measure-grid-num {
+      background: rgba(170, 187, 175, 0.15);
+      color: #AABBAF;
+    }
+
+    .measure-grid-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-heading);
+      margin: 0;
+    }
+
+    .measure-grid-desc {
+      font-size: 0.85rem;
+      color: var(--color-body);
+      line-height: 1.55;
+      margin: 0;
+      min-height: 4.65em;
+      max-width: 12.5rem;
+    }
+    .measure-point-name {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--color-heading);
+      margin-bottom: 0.5rem;
+    }
+    .measure-point-desc {
+      font-size: 0.85rem;
+      color: var(--color-body);
+      line-height: 1.6;
+    }
+    .mistake-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-left: 3px solid #c0392b;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    [data-theme="dark"] .mistake-card { border-left-color: #e74c3c; }
+    .mistake-icon { color: #c0392b; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    [data-theme="dark"] .mistake-icon { color: #e74c3c; }
+    .tip-card {
+      background: rgba(38,60,53,0.06);
+      border: 1px solid rgba(38,60,53,0.15);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    [data-theme="dark"] .tip-card { background: rgba(170,187,175,0.07); border-color: rgba(170,187,175,0.15); }
+    .tip-icon { color: var(--color-primary); font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    [data-theme="dark"] .tip-icon { color: #AABBAF; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="container-fluid px-0">
+    <nav class="navbar-inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar-brand-group" aria-label="Thread and Form Atelier — Home">
+        <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-text"><span class="brand-name">Thread &amp; Form Atelier</span><span class="brand-tagline">Tailored to Fit. Made to Last.</span></span>
+      </a>
+      <ul class="navbar-nav-center" role="list">
+        <li><a href="index.html" class="nav-item-link">Home</a></li>
+        <li><a href="home2.html" class="nav-item-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-item-link">About</a></li>
+        <li><a href="services.html" class="nav-item-link">Services</a></li>
+        <li><a href="fabrics.html" class="nav-item-link">Fabrics</a></li>
+        <li><a href="measurement-guide.html" class="nav-item-link active" aria-current="page">Measurements</a></li>
+        <li><a href="alterations.html" class="nav-item-link">Alterations</a></li>
+        <li><a href="contact.html" class="nav-item-link">Contact</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+        <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+        <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+      </div>
+      <button class="navbar-toggler" id="mobile-toggler" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<nav class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html">Home</a></li><li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="fabrics.html">Fabrics</a></li><li><a href="measurement-guide.html" class="active">Measurements</a></li>
+    <li><a href="alterations.html">Alterations</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-controls">
+    <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+    <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+    <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- BANNER -->
+<div class="page-banner">
+  <img src="assets/images/hero/measurement-hero.png" alt="Dress form with measuring tape and tailoring tools" class="page-banner-image" loading="eager" />
+  <div class="page-banner-overlay" aria-hidden="true"></div>
+  <div class="page-banner-content">
+    <div class="container">
+      <p class="page-banner-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span> Measurements</p>
+      <h1 class="page-banner-title">Measurements</h1>
+      <p class="page-banner-subtitle">Measure correctly at home, or visit us for a professional session.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 — Before You Measure -->
+<section class="before-measure-section" aria-labelledby="before-measure-heading">
+  <div class="container">
+    <div class="row align-items-stretch g-4 g-lg-5">
+      <div class="col-lg-5 fade-in d-flex flex-column justify-content-center">
+        <span class="section-label">Getting Ready</span>
+        <h2 class="section-title" id="before-measure-heading">Before You<br><em>Begin Measuring</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+          Accurate measurements are the foundation of a perfectly fitted garment. 
+          Before you pick up the tape, follow these preparation steps to ensure 
+          your numbers are as accurate as possible.
+        </p>
+        <div class="d-flex flex-column gap-3">
+          <div class="tip-card">
+            <i class="bi bi-check2-circle tip-icon" aria-hidden="true"></i>
+            <p style="font-size:0.875rem;color:var(--color-body);">Wear fitted clothing or innerwear while measuring so the fabric lies close to your body without adding false inches.</p>
+          </div>
+          <div class="tip-card">
+            <i class="bi bi-check2-circle tip-icon" aria-hidden="true"></i>
+            <p style="font-size:0.875rem;color:var(--color-body);">Stand straight with your feet together in a relaxed, natural posture, breathing normally without pulling in your stomach.</p>
+          </div>
+          <div class="tip-card">
+            <i class="bi bi-check2-circle tip-icon" aria-hidden="true"></i>
+            <p style="font-size:0.875rem;color:var(--color-body);">Use a soft, flexible measuring tape and ask someone to assist for hard-to-reach shoulder and back measurements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-in d-flex">
+        <div style="position:relative;overflow:hidden;border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);width:100%;height:100%;min-height:560px;">
+          <img src="assets/images/sections/measurements.jpg" alt="Tailor's measuring tape on dress form in studio" style="width:100%;height:100%;min-height:560px;object-fit:cover;display:block;" loading="lazy" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(21,25,23,0.35) 100%);pointer-events:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — Women's Measurement Guide -->
+<section class="section-alt" aria-labelledby="womens-measure-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Women's Guide</span>
+        <h2 class="section-title" id="womens-measure-heading">Women's<br><em>Measurement Points</em></h2>
+        <p class="section-subtitle mx-auto">These are the 9 key anatomical measurements required for women's bespoke garments, saree blouses, suits and dresses.</p>
+      </div>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <!-- Left Column: Featured Visual Image Card -->
+      <div class="col-lg-5 fade-in">
+        <div class="guide-visual-card">
+          <img src="assets/images/pages/women-1.png" alt="Women's bespoke garment measurement profile" class="guide-visual-img" loading="lazy" />
+          <div class="guide-visual-overlay"></div>
+          <div class="guide-badge-box">
+            <div class="guide-badge-tag"><i class="bi bi-gender-female"></i> Women's Fit Profile</div>
+            <div class="guide-badge-title">9 Precision Points for Women's Garments</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: 2-Column Grid of Styled Measurement Cards -->
+      <div class="col-lg-7 fade-in">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Bust</h3>
+                <span class="measure-grid-num">01</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the fullest part of your chest, keeping the tape parallel to the floor without compressing the body at any point.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Natural Waist</h3>
+                <span class="measure-grid-num">02</span>
+              </div>
+              <p class="measure-grid-desc">Measure at the narrowest part of your waist, 2–3 inches above your hip bones, keeping the tape level. Exhale naturally before recording.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Full Hip</h3>
+                <span class="measure-grid-num">03</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the fullest part of your hips and seat, typically 8–9 inches below the waist with feet placed together and relaxed.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Shoulder Width</h3>
+                <span class="measure-grid-num">04</span>
+              </div>
+              <p class="measure-grid-desc">Measure across the upper back from one shoulder tip to the other, following the natural curve. Best taken with assistance for accuracy.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Sleeve Length</h3>
+                <span class="measure-grid-num">05</span>
+              </div>
+              <p class="measure-grid-desc">Measure from the shoulder tip down the outer arm, with the elbow slightly bent, to your desired sleeve end at wrist, elbow, or cap.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Garment Length</h3>
+                <span class="measure-grid-num">06</span>
+              </div>
+              <p class="measure-grid-desc">Measure from the shoulder apex straight down to your desired hemline at knee, ankle, or floor level, keeping the tape vertical.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Neck Base</h3>
+                <span class="measure-grid-num">07</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the base of the neck where the collar or neckline sits, keeping the tape level. Add 1 inch for comfortable ease.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Blouse Back</h3>
+                <span class="measure-grid-num">08</span>
+              </div>
+              <p class="measure-grid-desc">From nape of neck straight down the back to the desired hemline — crucial for saree blouses, fitted crop-top designs, and dresses.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 mx-auto">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Arm Circumference</h3>
+                <span class="measure-grid-num">09</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the fullest bicep point with the arm relaxed, leaving comfortable ease for fitted sleeves in silk or structured fabrics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — Men's Measurement Guide -->
+<section aria-labelledby="mens-measure-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Men's Guide</span>
+        <h2 class="section-title" id="mens-measure-heading">Men's<br><em>Measurement Points</em></h2>
+        <p class="section-subtitle mx-auto">Key measurements for men's shirts, suits, trousers and traditional wear, taken for master tailor pattern drafting.</p>
+      </div>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <!-- Left Column: 2-Column Grid of Styled Measurement Cards -->
+      <div class="col-lg-7 order-lg-1 fade-in">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Chest Width</h3>
+                <span class="measure-grid-num">01</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the fullest part of the chest beneath the arms, keeping the tape horizontal while breathing fully and naturally.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Waistband</h3>
+                <span class="measure-grid-num">02</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the natural waist where trousers are worn, typically 1–2 inches above the hip bones, keeping the tape level.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Seat / Hip</h3>
+                <span class="measure-grid-num">03</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the fullest part of the seat, about 8 inches below the waistband, keeping the tape level for an accurate trouser drape.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Collar Neck</h3>
+                <span class="measure-grid-num">04</span>
+              </div>
+              <p class="measure-grid-desc">Measure around the base of the neck, allowing 0.5–1 inch of comfortable ease for securely fastening formal shirt collars every time.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Jacket Shoulder</h3>
+                <span class="measure-grid-num">05</span>
+              </div>
+              <p class="measure-grid-desc">Measure from shoulder seam to shoulder seam across the upper back, following the natural curve for an accurately fitted jacket.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Sleeve Length</h3>
+                <span class="measure-grid-num">06</span>
+              </div>
+              <p class="measure-grid-desc">Measure from shoulder tip to wrist bone with the arm slightly bent, ensuring the shirt cuff rests comfortably at the wrist joint.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Trouser Inseam</h3>
+                <span class="measure-grid-num">07</span>
+              </div>
+              <p class="measure-grid-desc">Measure from the crotch seam down the inner leg to the ankle hemline, standing with feet hip-width apart and shoes removed for accurate length.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Jacket Length</h3>
+                <span class="measure-grid-num">08</span>
+              </div>
+              <p class="measure-grid-desc">Measure from the back nape of the neck to the bottom of the seat for balanced, classic suit-jacket proportions and a clean drape.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 mx-auto">
+            <div class="measure-grid-card">
+              <div class="measure-grid-header">
+                <h3 class="measure-grid-title">Shirt / Kurta Length</h3>
+                <span class="measure-grid-num">09</span>
+              </div>
+              <p class="measure-grid-desc">Measure from the back nape of the neck to the desired hemline, using mid-thigh for kurtas or hip level for neatly tucked-in shirts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: Featured Visual Image Card -->
+      <div class="col-lg-5 order-lg-2 fade-in">
+        <div class="guide-visual-card">
+          <img src="assets/images/pages/men-1.png" alt="Men's bespoke suit fitting profile" class="guide-visual-img" loading="lazy" />
+          <div class="guide-visual-overlay"></div>
+          <div class="guide-badge-box">
+            <div class="guide-badge-tag"><i class="bi bi-gender-male"></i> Men's Fit Profile</div>
+            <div class="guide-badge-title">9 Tailoring Points for Bespoke Men's Suiting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — Upper Body -->
+<section class="section-alt" aria-labelledby="upper-measure-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Upper Body</span>
+        <h2 class="section-title" id="upper-measure-heading">Upper Body<br><em>Measurement Tips</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">Upper body measurements directly affect the fit of blouses, shirts, jackets and suit shoulders. Even a small error here changes the entire garment's silhouette.</p>
+        <div class="d-flex flex-column gap-3">
+          <div class="measure-step-card">
+            <div class="measure-step-num">01</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Bust / Chest — Stand naturally</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Keep arms slightly away from the body and breathe naturally. Run the tape parallel to the floor around the fullest part of the chest without angling it.</p>
+            </div>
+          </div>
+          <div class="measure-step-card">
+            <div class="measure-step-num">02</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Shoulder — Ask for help</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Ask someone to keep the tape flat across your upper back, measuring precisely from one shoulder point to the other.</p>
+            </div>
+          </div>
+          <div class="measure-step-card">
+            <div class="measure-step-num">03</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Arm — Measure with a slight bend</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Bend your arm slightly at the elbow. Measure from the shoulder tip over the bent elbow to the wrist bone for the most accurate sleeve length.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <img src="assets/images/pages/upper_mesure.png" alt="Tailor measuring shoulder on dress form" style="width:100%;border-radius:var(--radius-xl);aspect-ratio:3/4;object-fit:cover;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — Lower Body -->
+<section aria-labelledby="lower-measure-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-lg-2 fade-in">
+        <span class="section-label">Lower Body</span>
+        <h2 class="section-title" id="lower-measure-heading">Lower Body<br><em>Measurement Tips</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">Lower body measurements are essential for trousers, skirts, salwar, lehengas and all garments worn at the waist and below. Take these with feet hip-width apart.</p>
+        <div class="d-flex flex-column gap-3">
+          <div class="measure-step-card">
+            <div class="measure-step-num">01</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Waist — Natural, not sucked in</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Find your natural waist by bending to one side — the crease that forms is your natural waist. Measure here, breathing normally.</p>
+            </div>
+          </div>
+          <div class="measure-step-card">
+            <div class="measure-step-num">02</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Hip — At the fullest point</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Stand with feet together. Measure at the fullest point of the hips — typically 8–9 inches below the natural waist. Do not hold the tape too loosely.</p>
+            </div>
+          </div>
+          <div class="measure-step-card">
+            <div class="measure-step-num">03</div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Inseam — Stand straight, shoes off</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Measure from the crotch seam down the inner leg to the ankle bone. Remove shoes for accuracy — shoe heel height affects perceived length.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1 fade-in">
+        <img src="assets/images/pages/bottom_measure.png" alt="Measuring tape and notebook with body measurements" style="width:100%;border-radius:var(--radius-xl);aspect-ratio:3/4;object-fit:cover;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — Common Mistakes -->
+<section class="section-alt" aria-labelledby="mistakes-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Avoid These</span>
+        <h2 class="section-title" id="mistakes-heading">Common Measurement<br><em>Mistakes</em></h2>
+        <p class="section-subtitle mx-auto">These are the most common measurement errors we encounter. Avoid them for accurate self-measurements.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Measuring over bulky clothes</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Thick clothing adds 1–2 inches to measurements. Always measure in fitted innerwear or close-fitting clothing for best accuracy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Holding your breath</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Chest and waist measurements taken while holding breath are often too small. Breathe normally and measure at the natural exhale.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Pulling the tape too tight</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">A tape pulled tightly compresses the body and gives a smaller reading. The tape should lie flat against the skin, not indent it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Measuring at an angle</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">The measuring tape must remain horizontal (parallel to the floor) for circumference measurements. Even a slight angle changes the number.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Rounding to nearest 5</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Always record exact measurements. Rounding 33.5 to 34 or 35 adds unwanted ease and changes the garment's fit significantly.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="mistake-card">
+          <i class="bi bi-x-circle mistake-icon" aria-hidden="true"></i>
+          <div>
+            <strong style="font-size:0.9rem;color:var(--color-heading);">Forgetting the hip measurement</strong>
+            <p style="font-size:0.85rem;color:var(--color-body);margin-top:0.25rem;">Clients often send only bust and waist measurements. Hips are essential for skirts, trousers, salwar and garments worn at or below the waist.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — Professional Measurement CTA -->
+<section class="position-relative overflow-hidden" style="padding:7rem 0;" aria-labelledby="measure-cta-heading">
+  <img src="assets/images/cta/measurement-cta.png" alt="Professional tailor studio" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy" aria-hidden="true" />
+  <div class="overlay-dark" aria-hidden="true"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <span class="section-label" style="color:rgba(245,239,230,0.65);">Professional Service</span>
+        <h2 id="measure-cta-heading" style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3.25rem);color:#F5EFE6;margin-bottom:1rem;">
+          Prefer a Professional<br><em>Measurement Session?</em>
+        </h2>
+        <p style="color:rgba(245,239,230,0.75);font-size:1rem;max-width:480px;margin:0 auto 2rem;line-height:1.75;">
+          Visit our studio for a complimentary professional measurement session — 
+          20 minutes, completely private. Your measurements are stored for future orders.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-white btn-lg" id="measure-cta-btn"><i class="bi bi-calendar3"></i> Book Measurement Session</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg" id="measure-services-btn">View Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand-group footer-brand-group" aria-label="Thread and Form Atelier — Home">
+          <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+          <span class="brand-text">
+            <span class="brand-name">Thread &amp; Form Atelier</span>
+            <span class="brand-tagline">TAILORED TO FIT. MADE TO LAST.</span>
+          </span>
+        </a><p class="footer-about">A bespoke tailoring studio dedicated to the art of custom stitching.</p><div class="footer-social"><a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></div></div>
+      <div><h2 class="footer-col-title">Services</h2><ul class="footer-nav-list"><li><a href="services.html">Women's Tailoring</a></li><li><a href="services.html">Men's Tailoring</a></li><li><a href="services.html">Occasion &amp; Bridal</a></li><li><a href="alterations.html">Garment Alterations</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
+      <div><h2 class="footer-col-title">Quick Links</h2><ul class="footer-nav-list"><li><a href="about.html">About the Atelier</a></li><li><a href="fabrics.html">Fabric Collection</a></li><li><a href="measurement-guide.html">Measurements</a></li><li><a href="login.html">Client Login</a></li><li><a href="signup.html">Create Account</a></li></ul></div>
+      <div><h2 class="footer-col-title">Studio</h2><div class="footer-studio-item"><i class="bi bi-geo-alt footer-studio-icon"></i><p class="footer-studio-text">12 Atelier Lane, Heritage Quarter<br>Chennai 600001</p></div><div class="footer-studio-item"><i class="bi bi-telephone footer-studio-icon"></i><p class="footer-studio-text">+91 98765 43210</p></div><div class="footer-studio-item"><i class="bi bi-envelope footer-studio-icon"></i><p class="footer-studio-text">hello@threadandform.in</p></div><div class="footer-hours mt-3"><div class="footer-hours-row"><span class="footer-hours-day">Mon – Sat</span><span class="footer-hours-time">9:30 AM – 7:00 PM</span></div><div class="footer-hours-row"><span class="footer-hours-day">Sunday</span><span class="footer-hours-time">10:00 AM – 4:00 PM</span></div></div></div>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Thread &amp; Form Atelier. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

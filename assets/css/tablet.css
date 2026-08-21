@@ -1,0 +1,425 @@
+/* ============================================================
+   Thread & Form Atelier — tablet.css
+   Tablet breakpoints (768px – 1199px)
+   ============================================================ */
+
+@media (max-width: 1199.98px) {
+
+  /* Show tablet nav */
+  .navbar-nav-center {
+    display: none;
+  }
+
+  .navbar-controls {
+    display: none !important;
+  }
+
+  .navbar-toggler {
+    display: flex;
+  }
+
+  .mobile-nav-drawer {
+    display: block;
+  }
+
+  .btn-nav-login {
+    display: none;
+  }
+
+  /* Adjust hero */
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  /* Section padding */
+  :root {
+    --section-py: 4.5rem;
+  }
+
+  /* Grid adjustments */
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main section .btn {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  main section .btn-link {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+  }
+
+  .service-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .service-card-footer .btn {
+    width: 100%;
+  }
+
+  .service-card-footer .tag {
+    align-self: flex-start;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Split sections */
+  .split-equal {
+    grid-template-columns: 1fr;
+  }
+
+  /* Bento */
+  .bento-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  /* iPad / Tablet Portrait */
+
+  .craft-value-grid>[class*="col-"] {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .form-card {
+    padding: 2.5rem;
+  }
+
+  .process-step {
+    padding: 1.5rem;
+  }
+
+  /* Compact tablet spacing */
+  .cards-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Auth */
+  .auth-page {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .auth-image-panel {
+    display: block;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .turnaround-card .turnaround-desc {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ---- Tablet Section Headings & Section Names Centering (768px – 1024px) ---- */
+@media (max-width: 1024px) {
+
+  .home2-page .h2-stat-text > span {
+    display: block;
+  }
+
+  .home2-page .h2-measure-option-desc {
+    min-height: 3.6em;
+  }
+
+  .home2-page .h2-craft-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .home2-page .h2-craft-images {
+    order: 2;
+    width: 100%;
+  }
+
+  .home2-page .h2-craft-points {
+    align-items: center;
+  }
+
+  .home2-page .h2-craft-points > .d-flex {
+    width: min(100%, 560px);
+    justify-content: flex-start;
+  }
+
+  .home2-page .h2-craft-points p {
+    flex: 1;
+    text-align: left;
+  }
+
+  .services-faq-section .services-faq-intro,
+  .services-faq-section .services-faq-list {
+    width: 100%;
+  }
+
+  .services-faq-section .services-faq-intro {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .services-faq-section .services-faq-intro > p {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-page .row > .atelier-space-main {
+    width: 66.6667% !important;
+    flex: 0 0 66.6667% !important;
+    max-width: 66.6667% !important;
+    align-self: center;
+  }
+
+  .about-page .row > .atelier-space-aside {
+    width: 33.3333% !important;
+    flex: 0 0 33.3333% !important;
+    max-width: 33.3333% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .services-process-row {
+    align-items: stretch !important;
+  }
+
+  .services-process-image {
+    display: flex;
+  }
+
+  .services-process-image-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    aspect-ratio: auto !important;
+  }
+
+}
+
+/* ---- 3 Cards Grid Layout: First two side-by-side, 3rd (last) card centered (768px – 1024px) ---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .cards-grid-3 > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: calc(50% - 0.75rem) !important;
+    justify-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .row > [class*="col-lg-4"],
+  .row > [class*="col-md-4"] {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  .row > [class*="col-lg-4"]:last-child:nth-child(odd),
+  .row > [class*="col-md-4"]:last-child:nth-child(odd) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* ---- 4 Cards / 4 Grid Layout: Always Align 2 by 2 on iPad Pro (768px – 1024px) ---- */
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .row > [class*="col-lg-3"],
+  .row > [class*="col-md-3"],
+  .craft-value-grid > [class*="col-"] {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* ---- Our Craft Section Alignment (iPad Pro 1024x1366 / Tablet) ---- */
+  section[aria-labelledby="intro-heading"] .col-lg-5,
+  section[aria-labelledby="intro-heading"] .col-lg-7 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  section[aria-labelledby="intro-heading"] .col-lg-5 {
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+
+  section[aria-labelledby="intro-heading"] .col-lg-5 .section-label,
+  section .section-label {
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  section[aria-labelledby="intro-heading"] .col-lg-5 .section-label::before,
+  section .section-label::before {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  section[aria-labelledby="intro-heading"] .col-lg-5 .section-title,
+  section[aria-labelledby="intro-heading"] .col-lg-5 .section-subtitle,
+  section[aria-labelledby="intro-heading"] .col-lg-5 p,
+  section .section-title,
+  section .section-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  section[aria-labelledby="intro-heading"] .col-lg-5 .btn-link,
+  section .btn-link,
+  .btn-link {
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: max-content !important;
+    max-width: 100% !important;
+  }
+
+  /* Our Craft Right Side Images stacked one by one */
+  .craft-images-row > .craft-img-col {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .section-label,
+  .hero-label,
+  .hero-label-dark,
+  .page-banner-label,
+  .badge-tag,
+  .guide-badge-tag {
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .section-label::before,
+  .hero-label-dark::before {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .section-title,
+  .hero-title,
+  .h2-split-title,
+  .page-banner-title,
+  .section-subtitle,
+  .page-banner-subtitle,
+  .hero-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ---- Single Section Button Centering (768px – 1024px) ---- */
+  section .d-flex:has(> .btn:only-child),
+  section .d-flex.justify-content-center,
+  .section-footer,
+  .section-cta {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  section .btn:only-child,
+  #fabrics-explore-btn,
+  #h2-measure-guide-btn,
+  #svc-cta-measure-btn,
+  #alt-measure-btn {
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+
+}
+
+/* ---- iPad Mini / Tablet Odd Grid Item Centering (768px – 1024px) ---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .row {
+    justify-content: center !important;
+  }
+
+  .cards-grid-3>*:last-child:nth-child(odd),
+  .cards-grid-4>*:last-child:nth-child(odd),
+  .bento-grid-5>*:last-child:nth-child(odd),
+  .measurement-body-grid>*:last-child:nth-child(odd),
+  .alteration-results-grid>*:last-child:nth-child(odd),
+  .why-us-grid>*:last-child:nth-child(odd),
+  .fabrics-grid>*:last-child:nth-child(odd),
+  /* Client Stories / Transformation Cards: keep exact same column width & height as other cards */
+  .cards-grid-3:has(.transformation-card) > *:last-child:nth-child(odd),
+  .transformation-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: calc(50% - 0.75rem) !important;
+    height: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-self: center !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+
+  /* iPad Pro / Large Tablet */
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

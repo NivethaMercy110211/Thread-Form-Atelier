@@ -1,0 +1,199 @@
+/* ============================================================
+   Thread & Form Atelier — dark-theme.css
+   Dark mode overrides for all sections and components
+   ============================================================ */
+
+/* ---- General dark transitions ---- */
+[data-theme="dark"] body {
+  background-color: #151917;
+  color: #C8C2BA;
+}
+
+/* ---- Section Alternates ---- */
+[data-theme="dark"] section.section-alt {
+  background-color: #1a1f1c;
+}
+
+/* ---- Tags ---- */
+[data-theme="dark"] .tag {
+  border-color: #2E3A35;
+  color: #AABBAF;
+}
+
+/* ---- Dividers ---- */
+[data-theme="dark"] .divider-ornament::before,
+[data-theme="dark"] .divider-ornament::after {
+  background: #2E3A35;
+}
+
+[data-theme="dark"] .divider-ornament span {
+  color: #AABBAF;
+}
+
+/* ---- Hero stat in dark ---- */
+[data-theme="dark"] .hero-stats {
+  border-color: rgba(245,239,230,0.08);
+}
+
+[data-theme="dark"] .hero-stat-item {
+  border-right-color: rgba(245,239,230,0.08);
+}
+
+/* ---- Brand Logo SVG dark adaptation ---- */
+[data-theme="dark"] .brand-logo,
+[data-theme="dark"] .footer-logo,
+[data-theme="dark"] .auth-brand-logo {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(10%) saturate(270%) hue-rotate(85deg) brightness(92%);
+}
+
+[data-theme="dark"] .brand-name {
+  color: #F5EFE6;
+}
+
+[data-theme="dark"] .brand-tagline {
+  color: rgba(245,239,230,0.4);
+}
+
+/* ---- Split Section ---- */
+[data-theme="dark"] .split-content-panel {
+  background: #151917;
+}
+
+[data-theme="dark"] .split-content-panel-alt {
+  background: #1a1f1c;
+}
+
+/* ---- Bento Grid ---- */
+[data-theme="dark"] .bento-item {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+[data-theme="dark"] .bento-item-large {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Horizontal Cards ---- */
+[data-theme="dark"] .service-card-horizontal {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Turnaround Cards ---- */
+[data-theme="dark"] .turnaround-card {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Fabric Feature Section ---- */
+[data-theme="dark"] .fabric-feature-panel {
+  background: #1a1f1c;
+}
+
+/* ---- CTA Section ---- */
+[data-theme="dark"] .cta-section .cta-overlay {
+  background: linear-gradient(135deg, rgba(15,19,16,0.82) 0%, rgba(38,60,53,0.65) 100%);
+}
+
+/* ---- Measurement Guide ---- */
+[data-theme="dark"] .measurement-guide-panel {
+  background: #1a1f1c;
+}
+
+[data-theme="dark"] .measurement-step {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+[data-theme="dark"] .measurement-mistake-item {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Before/After ---- */
+[data-theme="dark"] .before-after-card {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Process Timeline ---- */
+[data-theme="dark"] .timeline-connector {
+  background: #2E3A35;
+}
+
+/* ---- Service Filter ---- */
+[data-theme="dark"] .filter-group-wrap {
+  border-bottom-color: #2E3A35;
+}
+
+/* ---- FAQ ---- */
+[data-theme="dark"] .faq-item {
+  border-bottom-color: #2E3A35;
+}
+
+[data-theme="dark"] .faq-question {
+  color: #F5EFE6;
+}
+
+[data-theme="dark"] .faq-answer {
+  color: #C8C2BA;
+}
+
+/* ---- Stat Numbers ---- */
+[data-theme="dark"] .stat-number {
+  color: #F5EFE6;
+}
+
+[data-theme="dark"] .stat-label {
+  color: #6a7a72;
+}
+
+/* ---- Card / Step Numbers ---- */
+[data-theme="dark"] .step-number,
+[data-theme="dark"] .philosophy-num,
+[data-theme="dark"] .process-step-num,
+[data-theme="dark"] .measure-step-num,
+[data-theme="dark"] .measure-grid-num {
+  color: #AABBAF !important;
+}
+
+/* ---- Opening Hours Table ---- */
+[data-theme="dark"] .hours-table tr {
+  border-color: #2E3A35;
+}
+
+/* ---- Map embed dark filter ---- */
+[data-theme="dark"] .map-embed {
+  filter: invert(0.9) hue-rotate(180deg) brightness(0.85);
+}
+
+/* ---- Newsletter/Appointment strip ---- */
+[data-theme="dark"] .appointment-strip {
+  background: #202622;
+  border-color: #2E3A35;
+}
+
+/* ---- Editorial large text ---- */
+[data-theme="dark"] .editorial-large-text {
+  color: #F5EFE6;
+  opacity: 0.04;
+}
+
+/* ---- Scrollbar ---- */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #151917;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #2E3A35;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #3a4a42;
+}

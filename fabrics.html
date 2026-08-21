@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thread &amp; Form Atelier Fabric Collection — Cotton, linen, silk, wool, suiting and occasion fabrics. Expert fabric consultation for your custom garment." />
+  <title>Fabrics | Thread &amp; Form Atelier</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/banner.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <style>
+    .fabric-editorial {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .fabric-editorial.reverse { grid-template-columns: 1.4fr 1fr; }
+    .fabric-editorial-image { position: relative; min-height: 400px; }
+    .fabric-editorial-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .fabric-editorial-content { padding: 3.5rem; background: var(--bg-card); display: flex; flex-direction: column; justify-content: center; }
+    .fabric-swatch-strip {
+      display: flex;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .fabric-swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      border: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+    .fabric-property-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .fabric-property {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .fabric-property-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); }
+    .fabric-property-value { font-size: 0.82rem; font-weight: 600; color: var(--color-heading); }
+    @media (max-width: 991.98px) {
+      .fabric-editorial, .fabric-editorial.reverse { grid-template-columns: 1fr; }
+      .fabric-editorial-image { min-height: 280px; }
+      .fabric-editorial-content { padding: 2rem; }
+      .fabric-editorial-image { order: -1 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="container-fluid px-0">
+    <nav class="navbar-inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar-brand-group" aria-label="Thread and Form Atelier — Home">
+        <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-text"><span class="brand-name">Thread &amp; Form Atelier</span><span class="brand-tagline">Tailored to Fit. Made to Last.</span></span>
+      </a>
+      <ul class="navbar-nav-center" role="list">
+        <li><a href="index.html" class="nav-item-link">Home</a></li>
+        <li><a href="home2.html" class="nav-item-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-item-link">About</a></li>
+        <li><a href="services.html" class="nav-item-link">Services</a></li>
+        <li><a href="fabrics.html" class="nav-item-link active" aria-current="page">Fabrics</a></li>
+        <li><a href="measurement-guide.html" class="nav-item-link">Measurements</a></li>
+        <li><a href="alterations.html" class="nav-item-link">Alterations</a></li>
+        <li><a href="contact.html" class="nav-item-link">Contact</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+        <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+        <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+      </div>
+      <button class="navbar-toggler" id="mobile-toggler" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<nav class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html">Home</a></li><li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="fabrics.html" class="active">Fabrics</a></li><li><a href="measurement-guide.html">Measurements</a></li>
+    <li><a href="alterations.html">Alterations</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-controls">
+    <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+    <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+    <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- BANNER -->
+<div class="page-banner">
+  <img src="assets/images/hero/fabrics-hero.png" alt="Premium fabric rolls arranged in tailoring studio" class="page-banner-image" loading="eager" />
+  <div class="page-banner-overlay" aria-hidden="true"></div>
+  <div class="page-banner-content">
+    <div class="container">
+      <p class="page-banner-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span> Fabrics</p>
+      <h1 class="page-banner-title">Fabric Collection</h1>
+      <p class="page-banner-subtitle">Over 60 curated fabrics — choose your texture, weight, and season.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO — Our Materials -->
+<section aria-labelledby="fab-intro-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center fade-in">
+        <span class="section-label">Our Materials</span>
+        <h2 class="section-title" id="fab-intro-heading">The Fabric Is<br><em>Where It All Begins</em></h2>
+        <p class="section-subtitle mx-auto">
+          Before the first stitch, there is the fabric — the soul of every garment. 
+          At Thread &amp; Form, we source fabrics from established textile mills across India, 
+          selecting only materials that meet our standards for texture, durability and drape.
+        </p>
+      </div>
+    </div>
+
+    <!-- Creative 4-Image Grid -->
+    <div class="row g-4 fade-in">
+      <div class="col-sm-6 col-lg-3">
+        <div class="position-relative overflow-hidden rounded-4 shadow-sm group-hover-zoom" style="aspect-ratio: 3/4; border: 1px solid var(--color-border);">
+          <img src="assets/images/pages/01_mulberry_silk.jpg" alt="Pure Mulberry Silk Fabric Swatches" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease-out-expo);" loading="lazy" class="grid-zoom-img" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,30,26,0.85) 0%, transparent 60%);"></div>
+          <div style="position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;color:#F5EFE6;">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(245,239,230,0.2);backdrop-filter:blur(6px);padding:0.25rem 0.6rem;border-radius:20px;display:inline-block;margin-bottom:0.4rem;">Silks &amp; Satins</span>
+            <h4 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:400;margin:0;color:#F5EFE6;">Mulberry Silk</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="position-relative overflow-hidden rounded-4 shadow-sm group-hover-zoom" style="aspect-ratio: 3/4; border: 1px solid var(--color-border);">
+          <img src="assets/images/pages/02_organic_cotton_linen.jpg" alt="Handloom Organic Cotton Weave" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease-out-expo);" loading="lazy" class="grid-zoom-img" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,30,26,0.85) 0%, transparent 60%);"></div>
+          <div style="position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;color:#F5EFE6;">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(245,239,230,0.2);backdrop-filter:blur(6px);padding:0.25rem 0.6rem;border-radius:20px;display:inline-block;margin-bottom:0.4rem;">Natural Weaves</span>
+            <h4 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:400;margin:0;color:#F5EFE6;">Organic Cotton &amp; Linen</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="position-relative overflow-hidden rounded-4 shadow-sm group-hover-zoom" style="aspect-ratio: 3/4; border: 1px solid var(--color-border);">
+          <img src="assets/images/pages/03_merino_wool.jpg" alt="Structured Suiting Wool Textiles" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease-out-expo);" loading="lazy" class="grid-zoom-img" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,30,26,0.85) 0%, transparent 60%);"></div>
+          <div style="position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;color:#F5EFE6;">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(245,239,230,0.2);backdrop-filter:blur(6px);padding:0.25rem 0.6rem;border-radius:20px;display:inline-block;margin-bottom:0.4rem;">Formal Suiting</span>
+            <h4 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:400;margin:0;color:#F5EFE6;">Merino Wool 120s</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="position-relative overflow-hidden rounded-4 shadow-sm group-hover-zoom" style="aspect-ratio: 3/4; border: 1px solid var(--color-border);">
+          <img src="assets/images/pages/04_royal_brocades.jpg" alt="Heritage Velvet & Brocade Craftsmanship" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease-out-expo);" loading="lazy" class="grid-zoom-img" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,30,26,0.85) 0%, transparent 60%);"></div>
+          <div style="position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;color:#F5EFE6;">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(245,239,230,0.2);backdrop-filter:blur(6px);padding:0.25rem 0.6rem;border-radius:20px;display:inline-block;margin-bottom:0.4rem;">Occasion &amp; Velvet</span>
+            <h4 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:400;margin:0;color:#F5EFE6;">Royal Brocades</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 — Cotton -->
+<section class="section-alt" aria-labelledby="fab-cotton-heading">
+  <div class="container">
+    <div class="fabric-editorial fade-in">
+      <div class="fabric-editorial-image">
+        <img src="assets/images/pages/cotton.png" alt="Cotton fabric rolls in cream and natural tones" loading="lazy" />
+      </div>
+      <div class="fabric-editorial-content">
+        <span class="section-label">01 — Cotton</span>
+        <h2 id="fab-cotton-heading" class="section-title">Pure &amp; Breathable<br><em>Cotton</em></h2>
+        <p style="font-size:0.95rem;color:var(--color-body);margin-bottom:1.25rem;">
+          Our cotton range includes fine Egyptian long-staple, soft Cambric, structured poplin, 
+          and lightweight voile. Ideal for everyday blouses, kurtas, shirts, and summer dresses — 
+          cotton offers unmatched comfort in warm climates.
+        </p>
+        <div class="fabric-swatch-strip" aria-label="Available cotton shades">
+          <div class="fabric-swatch" style="background:#F5EFE6;" title="Natural White"></div>
+          <div class="fabric-swatch" style="background:#d4c9a8;" title="Cream"></div>
+          <div class="fabric-swatch" style="background:#263C35;" title="Deep Forest"></div>
+          <div class="fabric-swatch" style="background:#1a2a5e;" title="Navy"></div>
+          <div class="fabric-swatch" style="background:#6b3a2a;" title="Rust"></div>
+          <div class="fabric-swatch" style="background:#3d3d3d;" title="Charcoal"></div>
+        </div>
+        <div class="fabric-property-row">
+          <div class="fabric-property"><span class="fabric-property-label">Weight</span><span class="fabric-property-value">Light – Medium</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Season</span><span class="fabric-property-value">Summer / Year-round</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Best For</span><span class="fabric-property-value">Blouses, Kurtas, Shirts</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Care</span><span class="fabric-property-value">Machine washable</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — Linen -->
+<section aria-labelledby="fab-linen-heading">
+  <div class="container">
+    <div class="fabric-editorial reverse fade-in">
+      <div class="fabric-editorial-content" style="order:1;">
+        <span class="section-label">02 — Linen</span>
+        <h2 id="fab-linen-heading" class="section-title">Textured &amp; Effortless<br><em>Linen</em></h2>
+        <p style="font-size:0.95rem;color:var(--color-body);margin-bottom:1.25rem;">
+          Pure Irish and Belgian linen offer a distinctive natural texture, beautiful drape, 
+          and remarkable breathability. Linen grows more beautiful with wear — developing a 
+          soft, relaxed character that becomes part of the garment's story.
+        </p>
+        <div class="fabric-swatch-strip" aria-label="Available linen shades">
+          <div class="fabric-swatch" style="background:#e8d9bf;" title="Natural Linen"></div>
+          <div class="fabric-swatch" style="background:#c9b99a;" title="Warm Beige"></div>
+          <div class="fabric-swatch" style="background:#8b7355;" title="Khaki"></div>
+          <div class="fabric-swatch" style="background:#4a5c4e;" title="Sage"></div>
+          <div class="fabric-swatch" style="background:#2d4a5a;" title="Teal"></div>
+          <div class="fabric-swatch" style="background:#3d3d3d;" title="Charcoal"></div>
+        </div>
+        <div class="fabric-property-row">
+          <div class="fabric-property"><span class="fabric-property-label">Weight</span><span class="fabric-property-value">Light – Medium</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Season</span><span class="fabric-property-value">Summer / Spring</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Best For</span><span class="fabric-property-value">Dresses, Trousers, Shirts</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Care</span><span class="fabric-property-value">Hand wash / dry clean</span></div>
+        </div>
+      </div>
+      <div class="fabric-editorial-image" style="order:2;">
+        <img src="assets/images/pages/linen.png" alt="Linen fabric texture detail" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — Silk -->
+<section class="section-alt" aria-labelledby="fab-silk-heading">
+  <div class="container">
+    <div class="fabric-editorial fade-in">
+      <div class="fabric-editorial-image">
+        <img src="assets/images/pages/silk.png" alt="Silk blouse being stitched with fine embroidery" loading="lazy" />
+      </div>
+      <div class="fabric-editorial-content">
+        <span class="section-label">03 — Silk</span>
+        <h2 id="fab-silk-heading" class="section-title">Luminous &amp; Refined<br><em>Silk</em></h2>
+        <p style="font-size:0.95rem;color:var(--color-body);margin-bottom:1.25rem;">
+          Our silk collection includes Mulberry silk, Dupioni, raw silk, and georgette. 
+          Silk requires skilled hands to stitch well — and our tailors have decades of 
+          experience working with its unique drape and weight. The result is extraordinary.
+        </p>
+        <div class="fabric-swatch-strip" aria-label="Available silk shades">
+          <div class="fabric-swatch" style="background:#f5e6d3;" title="Ivory"></div>
+          <div class="fabric-swatch" style="background:#d4a8c7;" title="Rose"></div>
+          <div class="fabric-swatch" style="background:#a8c4d4;" title="Sky Blue"></div>
+          <div class="fabric-swatch" style="background:#8b2a2a;" title="Deep Red"></div>
+          <div class="fabric-swatch" style="background:#4a3570;" title="Plum"></div>
+          <div class="fabric-swatch" style="background:#1a2a5e;" title="Midnight"></div>
+        </div>
+        <div class="fabric-property-row">
+          <div class="fabric-property"><span class="fabric-property-label">Weight</span><span class="fabric-property-value">Light – Medium</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Season</span><span class="fabric-property-value">All Seasons</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Best For</span><span class="fabric-property-value">Blouses, Gowns, Sarees</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Care</span><span class="fabric-property-value">Dry clean only</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — Wool -->
+<section aria-labelledby="fab-wool-heading">
+  <div class="container">
+    <div class="fabric-editorial reverse fade-in">
+      <div class="fabric-editorial-content" style="order:1;">
+        <span class="section-label">04 — Wool</span>
+        <h2 id="fab-wool-heading" class="section-title">Structured &amp; Warm<br><em>Fine Wool</em></h2>
+        <p style="font-size:0.95rem;color:var(--color-body);margin-bottom:1.25rem;">
+          From featherweight Super 100s suiting wool to robust tweed and flannel, our wool 
+          selection is curated for Indian tailoring conditions. Wool breathes better than 
+          polyester, ages beautifully, and is the natural choice for any formal garment 
+          intended to last.
+        </p>
+        <div class="fabric-swatch-strip" aria-label="Available wool shades">
+          <div class="fabric-swatch" style="background:#1a1a1a;" title="Midnight Black"></div>
+          <div class="fabric-swatch" style="background:#263C35;" title="Deep Forest"></div>
+          <div class="fabric-swatch" style="background:#1a2a5e;" title="Navy"></div>
+          <div class="fabric-swatch" style="background:#5c5035;" title="Dark Camel"></div>
+          <div class="fabric-swatch" style="background:#7a7a7a;" title="Medium Grey"></div>
+          <div class="fabric-swatch" style="background:#c4b8a8;" title="Light Grey"></div>
+        </div>
+        <div class="fabric-property-row">
+          <div class="fabric-property"><span class="fabric-property-label">Weight</span><span class="fabric-property-value">Medium – Heavy</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Season</span><span class="fabric-property-value">Winter / Formal</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Best For</span><span class="fabric-property-value">Suits, Blazers, Overcoats</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Care</span><span class="fabric-property-value">Dry clean only</span></div>
+        </div>
+      </div>
+      <div class="fabric-editorial-image" style="order:2;">
+        <img src="assets/images/pages/wool.png" alt="Fine wool suit jacket with hand-stitched details" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — Suiting -->
+<section class="section-alt" aria-labelledby="fab-suiting-heading">
+  <div class="container">
+    <div class="fabric-editorial fade-in">
+      <div class="fabric-editorial-image">
+        <img src="assets/images/sections/fabric-selection.jpg" alt="Suiting fabric bolts in navy and charcoal tones" loading="lazy" />
+      </div>
+      <div class="fabric-editorial-content">
+        <span class="section-label">05 — Suiting Fabrics</span>
+        <h2 id="fab-suiting-heading" class="section-title">Italian &amp; Domestic<br><em>Suiting Fabrics</em></h2>
+        <p style="font-size:0.95rem;color:var(--color-body);margin-bottom:1.25rem;">
+          Our suiting range includes Italian wool-blend suitings, tropical wools for warm climates, 
+          structured cottons, and poly-viscose blends. We advise you on which fabric best suits 
+          your occasion, climate, and desired aesthetic.
+        </p>
+        <div class="fabric-swatch-strip" aria-label="Available suiting shades">
+          <div class="fabric-swatch" style="background:#1b2430;" title="Midnight Navy"></div>
+          <div class="fabric-swatch" style="background:#2c3e50;" title="Classic Charcoal"></div>
+          <div class="fabric-swatch" style="background:#34495e;" title="Slate Blue"></div>
+          <div class="fabric-swatch" style="background:#4b382a;" title="Espresso Brown"></div>
+          <div class="fabric-swatch" style="background:#263C35;" title="Deep Forest"></div>
+          <div class="fabric-swatch" style="background:#d4c9a8;" title="Sand Beige"></div>
+        </div>
+        <div class="fabric-property-row">
+          <div class="fabric-property"><span class="fabric-property-label">Origin</span><span class="fabric-property-value">Italian &amp; Domestic</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Weight</span><span class="fabric-property-value">Medium – Heavy</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Best For</span><span class="fabric-property-value">Suits, Blazers, Trousers</span></div>
+          <div class="fabric-property"><span class="fabric-property-label">Width</span><span class="fabric-property-value">58–60 inches</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — Occasion Fabrics -->
+<section aria-labelledby="fab-occasion-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">06 — Occasion Fabrics</span>
+        <h2 class="section-title" id="fab-occasion-heading">For Your Most<br><em>Important Moments</em></h2>
+        <p class="section-subtitle mx-auto">Chiffon, organza, velvet, brocade, banarasi, and embellished fabrics for weddings, festivals, and special occasions.</p>
+      </div>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-sm-6 col-lg-4 fade-in">
+        <div class="fabric-card h-100">
+          <div class="fabric-card-swatch" style="aspect-ratio: 16 / 10;"><img src="assets/images/pages/01_chiffon_georgette.jpg" alt="Chiffon fabric detail" loading="lazy" /></div>
+          <div class="fabric-card-body">
+            <h3 class="fabric-name">Chiffon &amp; Georgette</h3>
+            <p class="fabric-desc">Sheer, lightweight fabrics with fluid drape — ideal for dupattas, sheer overlays, and flowing reception gowns.</p>
+            <div class="fabric-meta mt-auto">
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Weight</span><span class="fabric-meta-value">Very Light</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Best For</span><span class="fabric-meta-value">Dupattas, Gowns</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Season</span><span class="fabric-meta-value">All Year</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Care</span><span class="fabric-meta-value">Dry clean</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in">
+        <div class="fabric-card h-100">
+          <div class="fabric-card-swatch" style="aspect-ratio: 16 / 10;"><img src="assets/images/pages/02_brocade_banarasi.jpg" alt="Brocade fabric with gold thread weaving" loading="lazy" /></div>
+          <div class="fabric-card-body">
+            <h3 class="fabric-name">Brocade &amp; Banarasi</h3>
+            <p class="fabric-desc">Rich, woven fabrics with metallic zari or silk thread patterns. Ideal for blouses, lehengas, and festive kurtas.</p>
+            <div class="fabric-meta mt-auto">
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Weight</span><span class="fabric-meta-value">Medium – Heavy</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Best For</span><span class="fabric-meta-value">Blouses, Lehengas</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Season</span><span class="fabric-meta-value">Winter / Festive</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Care</span><span class="fabric-meta-value">Dry clean</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in">
+        <div class="fabric-card h-100">
+          <div class="fabric-card-swatch" style="aspect-ratio: 16 / 10;"><img src="assets/images/pages/03_velvet_organza.jpg" alt="Velvet fabric in deep jewel tones" loading="lazy" /></div>
+          <div class="fabric-card-body">
+            <h3 class="fabric-name">Velvet &amp; Organza</h3>
+            <p class="fabric-desc">Plush velvet for structured eveningwear, and crisp organza for sheer overlays and flared lehenga volumes.</p>
+            <div class="fabric-meta mt-auto">
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Weight</span><span class="fabric-meta-value">Medium – Heavy</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Best For</span><span class="fabric-meta-value">Bodices, Overlays</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Season</span><span class="fabric-meta-value">Winter / Festive</span></div>
+              <div class="fabric-meta-item"><span class="fabric-meta-label">Care</span><span class="fabric-meta-value">Dry clean</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — Fabric Consultation CTA -->
+<section class="position-relative overflow-hidden" style="padding:7rem 0;" aria-labelledby="fab-cta-heading">
+  <img src="assets/images/cta/fabrics-cta.png" alt="Fabric consultation with measuring tools" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy" aria-hidden="true" />
+  <div class="overlay-dark" aria-hidden="true"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <span class="section-label" style="color:rgba(245,239,230,0.65);">Fabric Consultation</span>
+        <h2 id="fab-cta-heading" style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3.25rem);color:#F5EFE6;margin-bottom:1rem;">
+          Not Sure Which<br><em>Fabric to Choose?</em>
+        </h2>
+        <p style="color:rgba(245,239,230,0.75);font-size:1rem;max-width:480px;margin:0 auto 2rem;line-height:1.75;">
+          Let our fabric specialist guide you. Bring your garment idea and we'll 
+          recommend the perfect fabric for your body type, occasion, and climate.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-white btn-lg" id="fab-cta-btn"><i class="bi bi-calendar3"></i> Book Fabric Consultation</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg" id="fab-services-btn">View Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand-group footer-brand-group" aria-label="Thread and Form Atelier — Home">
+          <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+          <span class="brand-text">
+            <span class="brand-name">Thread &amp; Form Atelier</span>
+            <span class="brand-tagline">TAILORED TO FIT. MADE TO LAST.</span>
+          </span>
+        </a><p class="footer-about">A bespoke tailoring studio dedicated to the art of custom stitching.</p><div class="footer-social"><a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></div></div>
+      <div><h2 class="footer-col-title">Services</h2><ul class="footer-nav-list"><li><a href="services.html">Women's Tailoring</a></li><li><a href="services.html">Men's Tailoring</a></li><li><a href="services.html">Occasion &amp; Bridal</a></li><li><a href="alterations.html">Garment Alterations</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
+      <div><h2 class="footer-col-title">Quick Links</h2><ul class="footer-nav-list"><li><a href="about.html">About the Atelier</a></li><li><a href="fabrics.html">Fabric Collection</a></li><li><a href="measurement-guide.html">Measurements</a></li><li><a href="login.html">Client Login</a></li><li><a href="signup.html">Create Account</a></li></ul></div>
+      <div><h2 class="footer-col-title">Studio</h2><div class="footer-studio-item"><i class="bi bi-geo-alt footer-studio-icon"></i><p class="footer-studio-text">12 Atelier Lane, Heritage Quarter<br>Chennai 600001</p></div><div class="footer-studio-item"><i class="bi bi-telephone footer-studio-icon"></i><p class="footer-studio-text">+91 98765 43210</p></div><div class="footer-studio-item"><i class="bi bi-envelope footer-studio-icon"></i><p class="footer-studio-text">hello@threadandform.in</p></div></div>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Thread &amp; Form Atelier. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thread &amp; Form Atelier Alterations — Professional garment alterations for trousers, dresses, shirts, jackets and bridal wear. Quick turnaround, expert finish." />
+  <title>Alterations | Thread &amp; Form Atelier</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/banner.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <style>
+    .alt-type-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      height: 100%;
+      transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+    }
+    .alt-type-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .alt-time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: rgba(38,60,53,0.07);
+      padding: 0.3rem 0.65rem;
+      border-radius: 50px;
+    }
+    [data-theme="dark"] .alt-time-badge { background: rgba(170,187,175,0.1); color: #AABBAF; }
+    .before-after-comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+    }
+    .ba-side { text-align: center; }
+    .ba-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.75rem; }
+    .ba-visual {
+      aspect-ratio: 3/4;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 120px;
+    }
+    .ba-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .ba-arrow { font-size: 1.5rem; color: var(--color-primary); flex-shrink: 0; }
+    [data-theme="dark"] .ba-arrow { color: #AABBAF; }
+    .ba-desc { font-size: 0.82rem; color: var(--color-body); margin-top: 0.75rem; line-height: 1.5; }
+    @media (max-width: 575.98px) {
+      .ba-desc-suit-after { font-size: 0.77rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="container-fluid px-0">
+    <nav class="navbar-inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar-brand-group" aria-label="Thread and Form Atelier — Home">
+        <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-text"><span class="brand-name">Thread &amp; Form Atelier</span><span class="brand-tagline">Tailored to Fit. Made to Last.</span></span>
+      </a>
+      <ul class="navbar-nav-center" role="list">
+        <li><a href="index.html" class="nav-item-link">Home</a></li>
+        <li><a href="home2.html" class="nav-item-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-item-link">About</a></li>
+        <li><a href="services.html" class="nav-item-link">Services</a></li>
+        <li><a href="fabrics.html" class="nav-item-link">Fabrics</a></li>
+        <li><a href="measurement-guide.html" class="nav-item-link">Measurements</a></li>
+        <li><a href="alterations.html" class="nav-item-link active" aria-current="page">Alterations</a></li>
+        <li><a href="contact.html" class="nav-item-link">Contact</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+        <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+        <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+      </div>
+      <button class="navbar-toggler" id="mobile-toggler" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<nav class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html">Home</a></li><li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="fabrics.html">Fabrics</a></li><li><a href="measurement-guide.html">Measurements</a></li>
+    <li><a href="alterations.html" class="active">Alterations</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-controls">
+    <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+    <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+    <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- BANNER -->
+<div class="page-banner">
+  <img src="assets/images/hero/alter-hero.png" alt="Tailor carefully adjusting garment seam" class="page-banner-image" loading="eager" />
+  <div class="page-banner-overlay" aria-hidden="true"></div>
+  <div class="page-banner-content">
+    <div class="container">
+      <p class="page-banner-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span> Alterations</p>
+      <h1 class="page-banner-title">Alteration Services</h1>
+      <p class="page-banner-subtitle">Expert garment alterations — quick turnaround, precise results.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 — Alteration Services Overview -->
+<section aria-labelledby="alt-intro-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title" id="alt-intro-heading">Every Garment<br><em>Deserves a Perfect Fit</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+          Whether your favourite trousers have become too loose, a dress needs hemming 
+          for a wedding, or a suit jacket needs reshaping — our alteration service handles 
+          it all with professional precision.
+        </p>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+          We work on all types of garments: everyday clothing, formalwear, occasion wear, 
+          and bridal pieces. No job is too small, and no alteration too complex.
+        </p>
+        <div class="row g-3">
+          <div class="col-6">
+            <div style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;text-align:center;">
+              <div style="font-family:var(--font-heading);font-size:2.5rem;color:var(--color-heading);">1–3</div>
+              <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-muted);">Days: Simple Alterations</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:var(--color-primary);border-radius:var(--radius-md);padding:1.25rem;text-align:center;">
+              <div style="font-family:var(--font-heading);font-size:2.5rem;color:#F5EFE6;">5–7</div>
+              <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,230,0.7);">Days: Complex Alterations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <img src="assets/images/pages/alt-overview.jpg" alt="Tailor hands carefully pinning alteration on garment" style="width:100%;border-radius:var(--radius-xl);aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — Trouser Alterations -->
+<section class="section-alt" aria-labelledby="trouser-alt-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Trouser &amp; Bottom Wear</span>
+        <h2 class="section-title" id="trouser-alt-heading">Trouser<br><em>Alterations</em></h2>
+        <p class="section-subtitle mx-auto">From simple hemming to full waist resizing — we handle all trouser and bottom alterations with precision.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 1–2 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;color:var(--color-heading);">Hemming</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Shorten trouser length by single or double hem. We match the original stitch type and thread colour for a seamless finish.</p>
+          <ul class="service-list">
+            <li>Single &amp; double hem</li>
+            <li>Original stitch matching</li>
+            <li>Cuff preservation option</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 2–3 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;color:var(--color-heading);">Waist Resizing</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Take in or let out the waistband for a comfortable fit. We work from the back seam to preserve the front appearance and balanced hip line.</p>
+          <ul class="service-list">
+            <li>Take in up to 2 inches</li>
+            <li>Let out (if seam allowance permits)</li>
+            <li>Waistband restructuring</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 3–5 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;color:var(--color-heading);">Leg Width &amp; Taper</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Slim or widen the leg silhouette — from full thigh to ankle — to modernise older trousers or adjust fit for your body type with a cleaner finish.</p>
+          <ul class="service-list">
+            <li>Full taper (hip to ankle)</li>
+            <li>Partial taper (knee to ankle)</li>
+            <li>Leg width adjustment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — Dress Alterations -->
+<section aria-labelledby="dress-alt-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 fade-in">
+        <span class="section-label">Dresses &amp; Skirts</span>
+        <h2 class="section-title" id="dress-alt-heading">Dress &amp; Skirt<br><em>Alterations</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+          Whether a dress is too long, too loose at the waist, or needs a zip replaced — 
+          we handle all dress alterations with the same care we give to new garments.
+        </p>
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex gap-3 align-items-start">
+            <div class="service-icon-wrap flex-shrink-0" style="width:36px;height:36px;font-size:0.9rem;"><i class="bi bi-scissors"></i></div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Length Shortening / Lengthening</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);">From maxi to midi or knee-length, we reshape and level the hem so it falls evenly around the full circumference.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-start">
+            <div class="service-icon-wrap flex-shrink-0" style="width:36px;height:36px;font-size:0.9rem;"><i class="bi bi-gear"></i></div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Zip &amp; Closure Replacement</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);">Replace broken or outdated zips with modern concealed or contrast zips. We match original construction.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-start">
+            <div class="service-icon-wrap flex-shrink-0" style="width:36px;height:36px;font-size:0.9rem;"><i class="bi bi-arrow-down-up"></i></div>
+            <div>
+              <strong style="font-size:0.9rem;color:var(--color-heading);">Bodice &amp; Waist Adjustment</strong>
+              <p style="font-size:0.85rem;color:var(--color-body);">Take in side seams, add darts, or adjust the bodice for a more fitted or relaxed silhouette with balanced shaping.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-in">
+        <img src="assets/images/pages/alt-dress.jpg" alt="Elegant dress being fitted on a dress form" style="width:100%;border-radius:var(--radius-xl);aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — Shirt & Jacket Adjustments -->
+<section class="section-alt" aria-labelledby="shirt-alt-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Shirts &amp; Jackets</span>
+        <h2 class="section-title" id="shirt-alt-heading">Shirt &amp; Jacket<br><em>Adjustments</em></h2>
+        <p class="section-subtitle mx-auto">Men's formal alterations handled with the precision your wardrobe deserves.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 1–2 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.15rem;color:var(--color-heading);">Shirt Slimming</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Take in the side seams of a shirt for a slimmer, more tailored silhouette. We preserve original stitching style from shoulder to hem.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 1–2 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.15rem;color:var(--color-heading);">Sleeve Shortening</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Shorten shirt or jacket sleeves to the correct length. For jackets we can work with or without button cuffs, with proportions preserved.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 3–5 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.15rem;color:var(--color-heading);">Jacket Reshaping</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Full jacket alteration — shoulder, chest, waist, and hem — to bring an inherited or off-rack jacket into bespoke territory with a balanced fit.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="alt-type-card">
+          <span class="alt-time-badge"><i class="bi bi-clock"></i> 2–3 Days</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.15rem;color:var(--color-heading);">Collar &amp; Cuff Work</h3>
+          <p style="font-size:0.875rem;color:var(--color-body);flex:1;">Replace worn collars and cuffs to restore a garment to fresh condition, or update the style to something more contemporary.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — Bridal / Occasion Alterations -->
+<section aria-labelledby="bridal-alt-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 fade-in">
+        <img src="assets/images/pages/alt-bridal.jpg" alt="Bridal garment being carefully altered and fitted" style="width:100%;border-radius:var(--radius-xl);aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+        <div class="form-info-box bridal-timeline-notice mt-4">
+          <i class="bi bi-info-circle form-info-icon" aria-hidden="true"></i>
+          <p class="form-info-text">Bridal alteration timelines are confirmed at consultation. Please book at least 4–6 weeks before your event to allow adequate time for fittings.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Bridal &amp; Occasion</span>
+        <h2 class="section-title" id="bridal-alt-heading">Bridal &amp; Occasion<br><em>Alterations</em></h2>
+        <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+          Bridal and occasion alterations require the highest level of skill and sensitivity. 
+          These garments hold enormous personal significance — and we treat them accordingly. 
+          We work with all bridal fabrics including silk, brocade, organza and heavily embellished pieces.
+        </p>
+        <div class="d-flex flex-column gap-3 mb-4">
+          <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-check-circle-fill" style="color:var(--color-primary);font-size:0.9rem;flex-shrink:0;"></i>
+            <span style="font-size:0.9rem;color:var(--color-body);">Lehenga blouse resizing and refitting</span>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-check-circle-fill" style="color:var(--color-primary);font-size:0.9rem;flex-shrink:0;"></i>
+            <span style="font-size:0.9rem;color:var(--color-body);">Bridal gown hemming and bustle addition</span>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-check-circle-fill" style="color:var(--color-primary);font-size:0.9rem;flex-shrink:0;"></i>
+            <span style="font-size:0.9rem;color:var(--color-body);">Embellishment repositioning after alteration</span>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-check-circle-fill" style="color:var(--color-primary);font-size:0.9rem;flex-shrink:0;"></i>
+            <span style="font-size:0.9rem;color:var(--color-body);">Heirloom garment restoration and updating</span>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-check-circle-fill" style="color:var(--color-primary);font-size:0.9rem;flex-shrink:0;"></i>
+            <span style="font-size:0.9rem;color:var(--color-body);">Saree blouse reshaping and neckline modification</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — Before & After -->
+<section class="section-alt" aria-labelledby="ba-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Results</span>
+        <h2 class="section-title" id="ba-heading">Before &amp; After<br><em>Transformations</em></h2>
+        <p class="section-subtitle mx-auto">A skilled alteration can completely transform how a garment fits and looks. Here are a few examples of what we achieve.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="before-after-comparison">
+          <div class="ba-side">
+            <div class="ba-label">Before</div>
+            <div class="ba-visual"><img src="assets/images/pages/alt-ba-suit-before.jpg" alt="Suit jacket before alteration — loose fit" loading="lazy" /></div>
+            <p class="ba-desc">Loose at the shoulders and chest, sleeves too long, with an unshaped jacket fit.</p>
+          </div>
+          <div class="ba-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></div>
+          <div class="ba-side">
+            <div class="ba-label">After</div>
+            <div class="ba-visual"><img src="assets/images/pages/alt-ba-suit-after.jpg" alt="Suit jacket after alteration — precise fit" loading="lazy" /></div>
+            <p class="ba-desc ba-desc-suit-after">Shoulders reset, chest taken in, and sleeves shortened for a clean, balanced tailored fit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="before-after-comparison">
+          <div class="ba-side">
+            <div class="ba-label">Before</div>
+            <div class="ba-visual"><img src="assets/images/pages/alt_dress_before.jpg" alt="Dress before alteration — un-tailored, dragging hem and loose waist" loading="lazy" /></div>
+            <p class="ba-desc">Floor-length dress dragging, loose at the waist, with an unshaped inherited fit.</p>
+          </div>
+          <div class="ba-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></div>
+          <div class="ba-side">
+            <div class="ba-label">After</div>
+            <div class="ba-visual"><img src="assets/images/pages/alt_dress_after.jpg" alt="Dress after alteration — perfectly tailored midi fit" loading="lazy" /></div>
+            <p class="ba-desc">Hem raised to midi length and waist taken in for a clean, structured silhouette.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="before-after-comparison">
+          <div class="ba-side">
+            <div class="ba-label">Before</div>
+            <div class="ba-visual"><img src="assets/images/pages/wideleg.png" alt="Trousers before alteration — unhemmed, pinning seams" loading="lazy" /></div>
+            <p class="ba-desc">Wide-leg trousers with excess length, a loose waist, and too much fabric through the leg.</p>
+          </div>
+          <div class="ba-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></div>
+          <div class="ba-side">
+            <div class="ba-label">After</div>
+            <div class="ba-visual"><img src="assets/images/pages/ankle.png" alt="Trousers after alteration — modern slim tapered fit" loading="lazy" /></div>
+            <p class="ba-desc">Legs fully tapered, waist reshaped, and hems set at the ankle for a modern slim fit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — Alteration Appointment CTA -->
+<section class="position-relative overflow-hidden" style="padding:7rem 0;" aria-labelledby="alt-cta-heading">
+  <img src="assets/images/cta/alteration-cta.png" alt="Premium fabric for alteration work" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy" aria-hidden="true" />
+  <div class="overlay-dark" aria-hidden="true"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <span class="section-label" style="color:rgba(245,239,230,0.65);">Book an Alteration</span>
+        <h2 id="alt-cta-heading" style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3.25rem);color:#F5EFE6;margin-bottom:1rem;">
+          Bring Us Your<br><em>Garment</em>
+        </h2>
+        <p style="color:rgba(245,239,230,0.75);font-size:1rem;max-width:480px;margin:0 auto 2rem;line-height:1.75;">
+          Walk in with any garment that needs attention. We'll assess it, tell you what's possible, 
+          give you an accurate timeline, and get it right.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-white btn-lg" id="alt-cta-btn"><i class="bi bi-calendar3"></i> Book Alteration Appointment</a>
+          <a href="measurement-guide.html" class="btn btn-outline-white btn-lg" id="alt-measure-btn">Measurements</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand-group footer-brand-group" aria-label="Thread and Form Atelier — Home">
+          <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+          <span class="brand-text">
+            <span class="brand-name">Thread &amp; Form Atelier</span>
+            <span class="brand-tagline">TAILORED TO FIT. MADE TO LAST.</span>
+          </span>
+        </a><p class="footer-about">A bespoke tailoring studio dedicated to the art of custom stitching.</p><div class="footer-social"><a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></div></div>
+      <div><h2 class="footer-col-title">Services</h2><ul class="footer-nav-list"><li><a href="services.html">Women's Tailoring</a></li><li><a href="services.html">Men's Tailoring</a></li><li><a href="services.html">Occasion &amp; Bridal</a></li><li><a href="alterations.html">Garment Alterations</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
+      <div><h2 class="footer-col-title">Quick Links</h2><ul class="footer-nav-list"><li><a href="about.html">About the Atelier</a></li><li><a href="fabrics.html">Fabric Collection</a></li><li><a href="measurement-guide.html">Measurements</a></li><li><a href="login.html">Client Login</a></li><li><a href="signup.html">Create Account</a></li></ul></div>
+      <div><h2 class="footer-col-title">Studio</h2><div class="footer-studio-item"><i class="bi bi-geo-alt footer-studio-icon"></i><p class="footer-studio-text">12 Atelier Lane, Heritage Quarter<br>Chennai 600001</p></div><div class="footer-studio-item"><i class="bi bi-telephone footer-studio-icon"></i><p class="footer-studio-text">+91 98765 43210</p></div><div class="footer-studio-item"><i class="bi bi-envelope footer-studio-icon"></i><p class="footer-studio-text">hello@threadandform.in</p></div><div class="footer-hours mt-3"><div class="footer-hours-row"><span class="footer-hours-day">Mon – Sat</span><span class="footer-hours-time">9:30 AM – 7:00 PM</span></div><div class="footer-hours-row"><span class="footer-hours-day">Sunday</span><span class="footer-hours-time">10:00 AM – 4:00 PM</span></div></div></div>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Thread &amp; Form Atelier. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

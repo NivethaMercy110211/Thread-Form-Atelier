@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Thread &amp; Form Atelier — Experience the made-to-measure difference. Signature garments, precision fitting and bespoke consultation for a new kind of tailoring experience." />
+  <title>Made-to-Measure Experience | Thread &amp; Form Atelier</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/banner.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <style>
+    /* Home 2 specific: split hero */
+    .h2-hero-split,
+    .home2-split-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 65vh;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .h2-hero-content,
+    .h2-split-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.5rem 3rem 2.5rem 5rem;
+      background: var(--bg-section-alt);
+    }
+
+    .h2-hero-image,
+    .h2-split-right {
+      position: relative;
+      overflow: hidden;
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 100%;
+      width: 100%;
+    }
+
+    .h2-hero-image img,
+    .h2-split-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    @media (max-width: 991.98px) {
+      .h2-hero-split,
+      .home2-split-hero {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+      }
+
+      .h2-hero-content,
+      .h2-split-left {
+        order: 1 !important;
+        padding: 3.5rem 1.75rem 2.5rem !important;
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+      }
+
+      .h2-split-inner {
+        max-width: 640px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+
+      .hero-label-dark {
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .h2-split-title {
+        text-align: center !important;
+      }
+
+      .h2-hero-content .hero-subtitle {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .h2-hero-content .hero-cta-group {
+        justify-content: center !important;
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .h2-hero-image,
+      .h2-split-right {
+        order: 2 !important;
+        min-height: 340px !important;
+        height: 400px !important;
+        width: 100% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .h2-hero-image,
+      .h2-split-right {
+        min-height: 260px !important;
+        height: 280px !important;
+      }
+
+      .h2-hero-content,
+      .h2-split-left {
+        padding: 2.25rem 1.25rem 2rem !important;
+      }
+
+      .h2-split-title {
+        font-size: 1.85rem !important;
+      }
+
+      .hero-cta-group {
+        flex-direction: column !important;
+        width: 100% !important;
+      }
+
+      .hero-cta-group .btn {
+        width: 100% !important;
+      }
+    }
+
+    .h2-hero-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background: var(--color-primary);
+      color: #F5EFE6;
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      max-width: 220px;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bento-item {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--transition-normal), transform var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .bento-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+    }
+
+    .bento-item-wide {
+      grid-column: span 2;
+    }
+
+    .bento-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      transition: transform var(--transition-slow);
+    }
+
+    .bento-item:hover .bento-bg-img {
+      transform: scale(1.06);
+    }
+
+    .bento-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(15, 22, 19, 0.72) 0%, rgba(15, 22, 19, 0.88) 100%);
+      transition: background var(--transition-normal);
+    }
+
+    .bento-content {
+      position: relative;
+      z-index: 2;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .transformation-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .transformation-header {
+      padding: 2rem 2rem 0;
+    }
+
+    .transformation-quote {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--color-heading);
+      line-height: 1.6;
+      padding: 0 2rem 1.5rem;
+      flex: 1;
+    }
+
+    .transformation-footer {
+      border-top: 1px solid var(--color-border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .transformation-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .transformation-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 991.98px) {
+      .h2-hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .h2-hero-content {
+        padding: 4rem 2rem;
+        order: 2;
+      }
+
+      .h2-hero-image {
+        min-height: 380px;
+        order: 1;
+      }
+
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bento-item-wide {
+        grid-column: span 2;
+      }
+
+      .bento-item-tall {
+        grid-row: auto;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .h2-hero-content {
+        padding: 3rem 1.5rem;
+      }
+
+      .h2-hero-image {
+        min-height: 280px;
+      }
+
+      .h2-hero-badge {
+        display: none;
+      }
+
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-item-wide {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="home2-page">
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container-fluid px-0">
+      <nav class="navbar-inner" aria-label="Main navigation">
+        <a href="index.html" class="navbar-brand-group" aria-label="Thread and Form Atelier — Home">
+          <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40"
+            height="40" />
+          <span class="brand-text">
+            <span class="brand-name">Thread &amp; Form Atelier</span>
+            <span class="brand-tagline">Tailored to Fit. Made to Last.</span>
+          </span>
+        </a>
+        <ul class="navbar-nav-center" role="list">
+          <li><a href="index.html" class="nav-item-link">Home</a></li>
+          <li><a href="home2.html" class="nav-item-link active" aria-current="page">Home 2</a></li>
+          <li><a href="about.html" class="nav-item-link">About</a></li>
+          <li><a href="services.html" class="nav-item-link">Services</a></li>
+          <li><a href="fabrics.html" class="nav-item-link">Fabrics</a></li>
+          <li><a href="measurement-guide.html" class="nav-item-link">Measurements</a></li>
+          <li><a href="alterations.html" class="nav-item-link">Alterations</a></li>
+          <li><a href="contact.html" class="nav-item-link">Contact</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button class="ctrl-btn" data-theme-toggle title="Toggle Dark Mode" aria-label="Toggle Dark Mode"><i
+              class="bi bi-moon theme-icon"></i></button>
+          <button class="ctrl-btn" data-dir-toggle title="Toggle RTL" aria-label="Toggle RTL"><span
+              class="ctrl-btn-label dir-label">RTL</span></button>
+          <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+        </div>
+        <button class="navbar-toggler" id="mobile-toggler" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobile-drawer">
+          <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+    <ul class="mobile-nav-list" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home2.html" class="active">Home 2</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="fabrics.html">Fabrics</a></li>
+      <li><a href="measurement-guide.html">Measurements</a></li>
+      <li><a href="alterations.html">Alterations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-controls">
+      <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i
+          class="bi bi-moon theme-icon"></i></button>
+      <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span
+          class="ctrl-btn-label dir-label">RTL</span></button>
+      <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO — Split Hero Banner: Left Content, Right Image -->
+    <section class="home2-split-hero" aria-label="Made-to-measure hero">
+      <div class="h2-split-left fade-in">
+        <div class="h2-split-inner">
+          <p class="hero-label-dark">
+            <span>Made-to-Measure</span>
+          </p>
+          <h1 class="h2-split-title">
+            Clothing That<br>Understands <em>Your</em><br>Silhouette
+          </h1>
+          <p class="h2-split-subtitle">
+            Not every body is the same. That is why we never use standard sizing.
+            Every garment at Thread &amp; Form is built from your measurements —
+            your shape, your comfort, your style.
+          </p>
+          <div class="hero-cta-group">
+            <a href="contact.html" class="btn btn-primary btn-lg" id="h2-book-btn">
+              <i class="bi bi-calendar3"></i> Book Consultation
+            </a>
+            <a href="measurement-guide.html" class="btn btn-outline-primary btn-lg" id="h2-guide-btn">
+              Take My Measurements
+            </a>
+          </div>
+          <!-- Mini stats -->
+          <div class="h2-split-stats">
+            <div class="h2-stat-item">
+              <div class="h2-stat-num">15+</div>
+              <div class="h2-stat-text"><span>Fabric</span> <span>Types</span></div>
+            </div>
+            <div class="h2-stat-item">
+              <div class="h2-stat-num">48hr</div>
+              <div class="h2-stat-text"><span>Fastest</span> <span>Turnaround</span></div>
+            </div>
+            <div class="h2-stat-item">
+              <div class="h2-stat-num">3</div>
+              <div class="h2-stat-text"><span>Free Fitting</span> <span>Sessions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h2-split-right">
+        <img src="assets/images/pages/measure-system.png"
+          alt="Finished bespoke suit on garment rack in atelier — tailor adjusting lapel" class="h2-split-img"
+          fetchpriority="high" />
+        <div class="h2-split-badge">
+          <div class="badge-tag">Our Promise</div>
+          <div class="badge-text">Fit or we alter it, free.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1 — Made-to-Measure Experience -->
+    <section class="section-alt" aria-labelledby="h2-mtm-heading">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center fade-in">
+            <span class="section-label">The Experience</span>
+            <h2 class="section-title" id="h2-mtm-heading">The Made-to-Measure<br><em>Difference</em></h2>
+            <p class="section-subtitle mx-auto">Off-the-rack clothing fits a general size range. Made-to-measure fits
+              you — and only you. Here is what that means in practice.</p>
+          </div>
+        </div>
+        <!-- Bento Grid -->
+        <div class="bento-grid fade-in">
+          <!-- Row 1 Left: Wide item (2 cols) -->
+          <div class="bento-item bento-item-wide">
+            <div style="aspect-ratio:16/7;overflow:hidden;">
+              <img src="assets/images/pages/home2-measure.png"
+                alt="Measuring tape on dress form with client measurement notes"
+                style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+            </div>
+            <div class="bento-content">
+              <h3
+                style="font-family:var(--font-heading);font-size:1.45rem;color:var(--color-heading);margin-bottom:0.5rem;">
+                Built from Your Exact Dimensions
+              </h3>
+              <p style="font-size:0.9rem;color:var(--color-body);margin:0;">
+                We take 12–18 key measurements depending on your garment type, recording every nuance of your body for a
+                fit that standard sizes simply cannot match.
+              </p>
+            </div>
+          </div>
+          <!-- Row 1 Right: Stat item (1 col) -->
+          <div class="bento-item">
+            <img src="assets/images/pages/bespoke-1.png" alt="Drafting bespoke pattern" class="bento-bg-img" loading="lazy" />
+            <div class="bento-bg-overlay"></div>
+            <div class="bento-content"
+              style="height:100%;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:2.5rem 1.75rem;">
+              <div style="font-family:var(--font-heading);font-size:3.75rem;color:#F5EFE6;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,0.5);">
+                100%</div>
+              <div
+                style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,230,0.8);margin-top:0.5rem;">
+                Bespoke Pattern
+              </div>
+              <p style="font-size:0.85rem;color:rgba(245,239,230,0.9);margin-top:0.75rem;margin-bottom:0;">
+                Every pattern is drafted fresh for your measurements — never from a pre-made template.
+              </p>
+            </div>
+          </div>
+          <!-- Row 2 Left: Value item (1 col) -->
+          <div class="bento-item">
+            <img src="assets/images/pages/handlome.png" alt="Quality inspection craftsmanship" class="bento-bg-img" loading="lazy" />
+            <div class="bento-bg-overlay"></div>
+            <div class="bento-content"
+              style="height:100%;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:2.5rem 1.75rem;">
+              <div class="service-icon-wrap mx-auto mb-3" style="background:rgba(245,239,230,0.18);color:#F5EFE6;border:1px solid rgba(245,239,230,0.3);"><i class="bi bi-award"></i></div>
+              <h3
+                style="font-family:var(--font-heading);font-size:1.35rem;color:#F5EFE6;margin-bottom:0.4rem;text-shadow:0 2px 8px rgba(0,0,0,0.5);">
+                Quality Guaranteed
+              </h3>
+              <p style="font-size:0.875rem;color:rgba(245,239,230,0.9);margin:0;">
+                Every garment leaves our atelier with a multi-point inspection. We stand behind every stitch we make.
+              </p>
+            </div>
+          </div>
+          <!-- Row 2 Right: Craft item (2 cols) -->
+          <div class="bento-item bento-item-wide">
+            <div style="aspect-ratio:16/7;overflow:hidden;">
+              <img src="assets/images/sections/craftsmanship.jpg" alt="Expert hand stitching close-up"
+                style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+            </div>
+            <div class="bento-content">
+              <h3
+                style="font-family:var(--font-heading);font-size:1.45rem;color:var(--color-heading);margin-bottom:0.4rem;">
+                Hand-Finished Craftsmanship
+              </h3>
+              <p style="font-size:0.9rem;color:var(--color-body);margin:0;">
+                Lapels, cuffs, collars and buttonholes are meticulously hand-finished by master tailors for superior
+                structure and longevity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — Signature Garments -->
+    <section aria-labelledby="h2-signature-heading">
+      <div class="container">
+        <div class="row justify-content-between align-items-end mb-5">
+          <div class="col-lg-6 fade-in">
+            <span class="section-label">Signature Pieces</span>
+            <h2 class="section-title" id="h2-signature-heading">Garments We're<br><em>Known For</em></h2>
+          </div>
+          <div class="col-lg-4 text-lg-end fade-in">
+            <a href="services.html" class="btn-link">View All Services <i
+                class="bi bi-arrow-right btn-link-arrow"></i></a>
+          </div>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <!-- Card 1 -->
+          <div class="card-base fade-in">
+            <div class="card-image">
+              <img src="assets/images/pages/women-silk.png" alt="Custom women's silk blouse with embroidery"
+                loading="lazy" />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Women's</span>
+              <h3 class="card-title">Silk Blouse &amp; Kurta</h3>
+              <p class="card-description">Our most requested women's piece. Crafted in fine silk or cotton, with custom
+                embroidery, neckline and sleeve options. A wardrobe essential.</p>
+              <div class="card-footer-area">
+                <span class="tag">From 5 days</span>
+                <a href="services.html" class="btn-link" id="h2-womens-card-link">Explore <i
+                    class="bi bi-arrow-right btn-link-arrow"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card-base fade-in">
+            <div class="card-image">
+              <img src="assets/images/pages/men-1.png" alt="Bespoke men's suit with hand-stitched lapel"
+                loading="lazy" />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Men's</span>
+              <h3 class="card-title">Bespoke Suit &amp; Blazer</h3>
+              <p class="card-description">A structured bespoke suit begins with the right fabric and ends with your
+                signature style. Hand-canvassed, fully lined, and built to impress.</p>
+              <div class="card-footer-area">
+                <span class="tag">From 10 days</span>
+                <a href="services.html" class="btn-link" id="h2-mens-card-link">Explore <i
+                    class="bi bi-arrow-right btn-link-arrow"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card-base fade-in">
+            <div class="card-image">
+              <img src="assets/images/pages/ocassian-bride.png" alt="Premium fabric selection for occasion wear"
+                loading="lazy" />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Occasion</span>
+              <h3 class="card-title">Occasion &amp; Bridal Wear</h3>
+              <p class="card-description">From wedding lehengas to reception gowns, our occasion wear service combines
+                exquisite fabric with couture-level construction and detail.</p>
+              <div class="card-footer-area">
+                <span class="tag">On Consultation</span>
+                <a href="services.html" class="btn-link" id="h2-occasion-card-link">Explore <i
+                    class="bi bi-arrow-right btn-link-arrow"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — Precision Measurements -->
+    <section class="section-alt" aria-labelledby="h2-precision-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 fade-in h2-precision-copy">
+            <span class="section-label">Measurement System</span>
+            <h2 class="section-title" id="h2-precision-heading">Measured to<br><em>the Millimetre</em></h2>
+            <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+              Our measurement process is thorough, comfortable, and accurate.
+              We record 12–18 key body points and store your measurements securely
+              so your next order starts faster.
+            </p>
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-start gap-3">
+                <div class="service-icon-wrap flex-shrink-0" style="width:38px;height:38px;font-size:1rem;"><i
+                    class="bi bi-person-bounding-box"></i></div>
+                <div>
+                  <strong style="font-size:0.9rem;color:var(--color-heading);">In-Studio Measurement</strong>
+                  <p class="h2-measure-option-desc" style="font-size:0.85rem;margin-top:0.2rem;">Visit us for a private professional measurement session —
+                    20–30 minutes with every body point recorded accurately.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <div class="service-icon-wrap flex-shrink-0" style="width:38px;height:38px;font-size:1rem;"><i
+                    class="bi bi-phone"></i></div>
+                <div>
+                  <strong style="font-size:0.9rem;color:var(--color-heading);">Measurements</strong>
+                  <p class="h2-measure-option-desc" style="font-size:0.85rem;margin-top:0.2rem;">Prefer to measure at home? Our step-by-step guide
+                    walks you through every measurement with diagrams and tips.</p>
+                </div>
+              </div>
+            </div>
+            <a href="measurement-guide.html" class="btn btn-primary btn-md" id="h2-measure-guide-btn">
+              View Measurements
+            </a>
+          </div>
+          <div class="col-lg-7 fade-in">
+            <img src="assets/images/hero/home2.png"
+              alt="Dress form with measuring tape and measurement notebook"
+              style="width:100%;border-radius:var(--radius-xl);aspect-ratio:4/3;object-fit:cover;" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — Fabric Selection -->
+    <section aria-labelledby="h2-fabric-heading">
+      <div class="container">
+        <div class="row justify-content-between align-items-end mb-5 h2-fabric-heading-row">
+          <div class="col-lg-5 fade-in">
+            <span class="section-label">Materials</span>
+            <h2 class="section-title" id="h2-fabric-heading">Choose Your<br><em>Fabric</em></h2>
+          </div>
+          <div class="col-lg-5 fade-in">
+            <p class="h2-fabric-intro" style="font-size:0.95rem;color:var(--color-body);">Our fabric library covers over 60 options across
+              cotton, linen, silk, wool and structured suiting — for every season, every occasion, every body.</p>
+          </div>
+        </div>
+        <!-- Fabric horizontal cards -->
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="h2-fabric-card"
+              style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;transition:box-shadow var(--transition-normal);height:100%;">
+              <div
+                style="width:56px;height:56px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#f0ebe0,#e8ddd0);flex-shrink:0;">
+              </div>
+              <div>
+                <h4
+                  style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.3rem;">
+                  Cotton &amp; Linen</h4>
+                <p class="h2-fabric-desc" style="font-size:0.85rem;color:var(--color-body);">Breathable, versatile and ideal for everyday and
+                  summer wear. Natural, soft textures.</p>
+                <span class="tag mt-2 d-inline-block">All Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="h2-fabric-card"
+              style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;height:100%;">
+              <div
+                style="width:56px;height:56px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#d4c8e8,#c2b8dc);flex-shrink:0;">
+              </div>
+              <div>
+                <h4
+                  style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.3rem;">
+                  Silk &amp; Crepe</h4>
+                <p class="h2-fabric-desc" style="font-size:0.85rem;color:var(--color-body);">Luxurious drape and sheen for occasion wear,
+                  blouses and evening garments.</p>
+                <span class="tag mt-2 d-inline-block">Occasion</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 fade-in">
+            <div class="h2-fabric-card"
+              style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;height:100%;">
+              <div
+                style="width:56px;height:56px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#3a5a4f,#263C35);flex-shrink:0;">
+              </div>
+              <div>
+                <h4
+                  style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.3rem;">
+                  Wool &amp; Suiting</h4>
+                <p class="h2-fabric-desc" style="font-size:0.85rem;color:var(--color-body);">Structured, refined fabrics for formalwear, suits
+                  and winter garments.</p>
+                <span class="tag mt-2 d-inline-block">Formal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="fabrics.html" class="btn-link" id="h2-fabrics-link">Browse Full Fabric Collection <i
+              class="bi bi-arrow-right btn-link-arrow"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — Craftsmanship Details -->
+    <section class="section-alt" aria-labelledby="h2-craft-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-in h2-craft-images">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="img-frame ratio-4-3"
+                  style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border);">
+                  <img src="assets/images/pages/craftsmanship-1.png"
+                    alt="Skilled hands performing intricate hand stitching" class="img-cover" loading="lazy" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="img-frame ratio-4-3"
+                  style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border);">
+                  <img src="assets/images/pages/craftsmanship-2.png"
+                    alt="Custom garment being hand-stitched on dress form" class="img-cover" loading="lazy" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="img-frame ratio-4-3"
+                  style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border);">
+                  <img src="assets/images/pages/craftsmanship-3.png"
+                    alt="Close-up of hand stitching on charcoal wool fabric" class="img-cover" loading="lazy" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="img-frame ratio-4-3"
+                  style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border);">
+                  <img src="assets/images/pages/craftsmanship-4.png"
+                    alt="Intricate embroidery detail on custom silk garment" class="img-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 fade-in h2-craft-content">
+            <span class="section-label">Craftsmanship</span>
+            <h2 class="section-title" id="h2-craft-heading">The Details<br><em>Others Miss</em></h2>
+            <p class="mb-4" style="font-size:0.95rem;color:var(--color-body);">
+              True tailoring lives in the details. The weight of a seam, the tension of a stitch,
+              the precision of a dart — these are the differences between a garment that merely
+              covers and one that transforms.
+            </p>
+            <div class="d-flex flex-column gap-3 h2-craft-points">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-check-circle-fill"
+                  style="color:var(--color-primary);font-size:1rem;margin-top:0.2rem;flex-shrink:0;"></i>
+                <p style="font-size:0.9rem;color:var(--color-body);">Hand-stitched collars and cuffs for perfect
+                  structure and longevity</p>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-check-circle-fill"
+                  style="color:var(--color-primary);font-size:1rem;margin-top:0.2rem;flex-shrink:0;"></i>
+                <p style="font-size:0.9rem;color:var(--color-body);">French seams and bound buttonholes on premium
+                  garments</p>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-check-circle-fill"
+                  style="color:var(--color-primary);font-size:1rem;margin-top:0.2rem;flex-shrink:0;"></i>
+                <p style="font-size:0.9rem;color:var(--color-body);">Pattern-matched seams on checks and prints for
+                  visual harmony</p>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-check-circle-fill"
+                  style="color:var(--color-primary);font-size:1rem;margin-top:0.2rem;flex-shrink:0;"></i>
+                <p style="font-size:0.9rem;color:var(--color-body);">Pressed at every construction stage for sharp,
+                  lasting shape</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — Client Transformation -->
+    <section aria-labelledby="h2-transform-heading">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center fade-in">
+            <span class="section-label">Client Stories</span>
+            <h2 class="section-title" id="h2-transform-heading">What Our Clients<br><em>Experience</em></h2>
+            <p class="section-subtitle mx-auto">Real experiences from clients who found their perfect fit at Thread
+              &amp; Form Atelier.</p>
+          </div>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="transformation-card fade-in">
+            <div class="transformation-header">
+              <div class="d-flex gap-1 mb-2">
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+              </div>
+            </div>
+            <p class="transformation-quote">"I've worn ready-made suits my entire career. The first time I wore a suit
+              from Thread &amp; Form, I understood what fit truly means. It changed how I carry myself."</p>
+            <div class="transformation-footer">
+              <div class="transformation-avatar">
+                <img src="assets/images/pages/review-1.png" alt="Arjun Menon" loading="lazy" />
+              </div>
+              <div>
+                <div style="font-size:0.85rem;font-weight:600;color:var(--color-heading);">Arjun Menon</div>
+                <div style="font-size:0.75rem;color:var(--color-muted);">Bespoke Suit</div>
+              </div>
+            </div>
+          </div>
+          <div class="transformation-card fade-in">
+            <div class="transformation-header">
+              <div class="d-flex gap-1 mb-2">
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+              </div>
+            </div>
+            <p class="transformation-quote">"My bridal lehenga was everything I imagined and more. They worked patiently
+              through three design revisions and the final result was absolutely stunning."</p>
+            <div class="transformation-footer">
+              <div class="transformation-avatar">
+                <img src="assets/images/pages/review-2.png" alt="Priya Krishnamurthy" loading="lazy" />
+              </div>
+              <div>
+                <div style="font-size:0.85rem;font-weight:600;color:var(--color-heading);">Priya Krishnamurthy</div>
+                <div style="font-size:0.75rem;color:var(--color-muted);">Bridal Lehenga</div>
+              </div>
+            </div>
+          </div>
+          <div class="transformation-card fade-in">
+            <div class="transformation-header">
+              <div class="d-flex gap-1 mb-2">
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+                <i class="bi bi-star-fill" style="color:#b8960c;font-size:0.8rem;"></i>
+              </div>
+            </div>
+            <p class="transformation-quote">"I brought in a sari I inherited from my mother and asked them to make a
+              blouse. The craftsmanship was impeccable — not a single extra stitch out of place."</p>
+            <div class="transformation-footer">
+              <div class="transformation-avatar">
+                <img src="assets/images/pages/review-3.png" alt="Shalini Rajan" loading="lazy" />
+              </div>
+              <div>
+                <div style="font-size:0.85rem;font-weight:600;color:var(--color-heading);">Shalini Rajan</div>
+                <div style="font-size:0.75rem;color:var(--color-muted);">Custom Blouse</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — Consultation CTA -->
+    <section class="position-relative overflow-hidden" style="padding:7rem 0;" aria-labelledby="h2-cta-heading">
+      <img src="assets/images/cta/hom2-cta.png" alt="Heritage tailoring atelier studio interior"
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy" aria-hidden="true" />
+      <div class="overlay-dark" aria-hidden="true"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center">
+            <span class="section-label" style="color:rgba(245,239,230,0.65);">Begin Your Journey</span>
+            <h2 id="h2-cta-heading"
+              style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3.25rem);color:#F5EFE6;margin-bottom:1rem;">
+              Let's Create<br><em>Something Yours</em>
+            </h2>
+            <p style="color:rgba(245,239,230,0.75);font-size:1rem;max-width:460px;margin:0 auto 2rem;line-height:1.75;">
+              Book a free consultation at our studio. We'll talk about your garment,
+              your timeline, and bring your vision to life — one stitch at a time.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-white btn-lg" id="h2-cta-book-btn">
+                <i class="bi bi-calendar3"></i> Book Free Consultation
+              </a>
+              <a href="services.html" class="btn btn-outline-white btn-lg" id="h2-cta-services-btn">
+                View All Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand-group footer-brand-group"
+            aria-label="Thread and Form Atelier — Home">
+            <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40"
+              height="40" />
+            <span class="brand-text">
+              <span class="brand-name">Thread &amp; Form Atelier</span>
+              <span class="brand-tagline">TAILORED TO FIT. MADE TO LAST.</span>
+            </span>
+          </a>
+          <p class="footer-about">A bespoke tailoring studio dedicated to the art of custom stitching. We craft garments
+            that fit, last, and reflect who you are.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-col-title">Services</h2>
+          <ul class="footer-nav-list">
+            <li><a href="services.html">Women's Tailoring</a></li>
+            <li><a href="services.html">Men's Tailoring</a></li>
+            <li><a href="services.html">Occasion &amp; Bridal</a></li>
+            <li><a href="alterations.html">Garment Alterations</a></li>
+            <li><a href="contact.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-col-title">Quick Links</h2>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About the Atelier</a></li>
+            <li><a href="fabrics.html">Fabric Collection</a></li>
+            <li><a href="measurement-guide.html">Measurements</a></li>
+            <li><a href="login.html">Client Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-col-title">Studio</h2>
+          <div class="footer-studio-item"><i class="bi bi-geo-alt footer-studio-icon"></i>
+            <p class="footer-studio-text">12 Atelier Lane, Heritage Quarter<br>Chennai, Tamil Nadu 600001</p>
+          </div>
+          <div class="footer-studio-item"><i class="bi bi-telephone footer-studio-icon"></i>
+            <p class="footer-studio-text">+91 98765 43210</p>
+          </div>
+          <div class="footer-studio-item"><i class="bi bi-envelope footer-studio-icon"></i>
+            <p class="footer-studio-text">hello@threadandform.in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Thread &amp; Form Atelier. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

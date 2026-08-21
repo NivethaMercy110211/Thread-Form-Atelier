@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="brand-logo" aria-hidden="true">
+  <defs>
+    <!-- Primary Brand Button Color Gradient (Deep Forest Emerald #263C35 -> #1E3029) -->
+    <linearGradient id="tfPrimaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#263C35"/>
+      <stop offset="50%" stop-color="#1E3029"/>
+      <stop offset="100%" stop-color="#15241F"/>
+    </linearGradient>
+
+    <!-- Light Primary Accent Gradient (#3A5A4F -> #263C35) -->
+    <linearGradient id="tfPrimaryLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A5A4F"/>
+      <stop offset="100%" stop-color="#263C35"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    :root {
+      --logo-primary: #263C35;
+      --logo-accent: #3A5A4F;
+    }
+    @media (prefers-color-scheme: dark) {
+      .logo-fill { fill: #AABBAF !important; }
+      .logo-stroke { stroke: #AABBAF !important; }
+    }
+  </style>
+
+  <!-- Outer Stitching Ring Frame -->
+  <circle cx="32" cy="32" r="30" stroke="#263C35" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.4" class="logo-stroke logo-ring-outer"/>
+  <circle cx="32" cy="32" r="27" stroke="#263C35" stroke-width="0.8" opacity="0.25" class="logo-stroke logo-ring-inner"/>
+
+  <!-- 'T' Top Bar -->
+  <path d="M14 18 H50 C51.5 18 52.5 19 51 20.5 L48.5 23 H15.5 L13 20.5 C11.5 19 12.5 18 14 18 Z" fill="url(#tfPrimaryGrad)" class="logo-fill logo-mark logo-t-bar"/>
+  <path d="M14 18 C16 18 17 20 17 22 V23" stroke="#263C35" stroke-width="1.5" stroke-linecap="round" class="logo-stroke"/>
+  <path d="M50 18 C48 18 47 20 47 22 V23" stroke="#263C35" stroke-width="1.5" stroke-linecap="round" class="logo-stroke"/>
+
+  <!-- Tailoring Needle (Central Stem of T & F) -->
+  <g class="logo-needle">
+    <!-- Needle Shaft -->
+    <path d="M31 12 L33 12 L32.6 50 L32 54 L31.4 50 Z" fill="url(#tfPrimaryGrad)" class="logo-fill"/>
+    <!-- Needle Eyelet -->
+    <ellipse cx="32" cy="15" rx="1.2" ry="3" fill="#F5EFE6" stroke="#263C35" stroke-width="0.8" class="logo-stroke"/>
+  </g>
+
+  <!-- 'F' Horizontal Arms -->
+  <g class="logo-mark logo-f-arms">
+    <!-- F Upper Arm -->
+    <path d="M32.5 27 H45 C46.5 27 47 28 46 29 L44.5 30.5 H32.5 Z" fill="url(#tfPrimaryGrad)" class="logo-fill"/>
+    <!-- F Middle Arm -->
+    <path d="M32.5 36 H41 C42.2 36 42.8 37 42 38 L40.5 39.5 H32.5 Z" fill="url(#tfPrimaryGrad)" class="logo-fill"/>
+  </g>
+
+  <!-- Flowing Tailoring Thread Curve -->
+  <path d="M 44 10 Q 36 12 32 15 Q 26 19 23 26 Q 19 35 24 43 Q 29 49 37 46 Q 47 42 41 33 Q 37 28 32 32 Q 28 35 30 40 Q 32 45 42 48 Q 48 50 52 46" 
+        stroke="url(#tfPrimaryLightGrad)" 
+        stroke-width="1.8" 
+        fill="none" 
+        stroke-linecap="round" 
+        class="logo-stroke logo-thread"/>
+
+  <!-- Thread Eye Entry Line -->
+  <path d="M 32 15 Q 30 14 26 12" stroke="#263C35" stroke-width="1.2" fill="none" stroke-dasharray="1.5 1.5" class="logo-stroke"/>
+
+  <!-- Accent Stitch Dots -->
+  <circle cx="32" cy="54" r="1.5" fill="#263C35" class="logo-fill"/>
+  <circle cx="15" cy="32" r="1" fill="#263C35" opacity="0.6" class="logo-fill"/>
+  <circle cx="49" cy="32" r="1" fill="#263C35" opacity="0.6" class="logo-fill"/>
+</svg>

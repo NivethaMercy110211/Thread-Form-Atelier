@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Thread &amp; Form Atelier — Book an appointment, ask a question, or visit our studio. We're always happy to discuss your tailoring needs." />
+  <title>Contact &amp; Book | Thread &amp; Form Atelier</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/banner.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/cards.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/desktop.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <style>
+    .contact-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      height: 100%;
+    }
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .contact-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(38,60,53,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .contact-icon-wrap { background: rgba(170,187,175,0.1); color: #AABBAF; }
+    .contact-item-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.2rem; }
+    .contact-item-value { font-size: 0.925rem; color: var(--color-body); }
+    .contact-item-value a { color: inherit; text-decoration: none; }
+    .contact-item-value a:hover { color: var(--color-primary); }
+    .hours-table { width: 100%; }
+    .hours-table tr td { padding: 0.35rem 0; font-size: 0.875rem; }
+    .hours-table tr td:first-child { color: var(--color-heading); font-weight: 600; }
+    .hours-table tr td:last-child { color: var(--color-body); }
+    .map-placeholder {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 360px;
+      font-size: 0.875rem;
+      color: var(--color-muted);
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-success-msg {
+      display: none;
+      background: rgba(38,60,53,0.08);
+      border: 1px solid rgba(38,60,53,0.2);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      margin-top: 1rem;
+    }
+    [data-theme="dark"] .form-success-msg { background: rgba(170,187,175,0.1); border-color: rgba(170,187,175,0.2); color: #AABBAF; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="container-fluid px-0">
+    <nav class="navbar-inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar-brand-group" aria-label="Thread and Form Atelier — Home">
+        <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+        <span class="brand-text"><span class="brand-name">Thread &amp; Form Atelier</span><span class="brand-tagline">Tailored to Fit. Made to Last.</span></span>
+      </a>
+      <ul class="navbar-nav-center" role="list">
+        <li><a href="index.html" class="nav-item-link">Home</a></li>
+        <li><a href="home2.html" class="nav-item-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-item-link">About</a></li>
+        <li><a href="services.html" class="nav-item-link">Services</a></li>
+        <li><a href="fabrics.html" class="nav-item-link">Fabrics</a></li>
+        <li><a href="measurement-guide.html" class="nav-item-link">Measurements</a></li>
+        <li><a href="alterations.html" class="nav-item-link">Alterations</a></li>
+        <li><a href="contact.html" class="nav-item-link active" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+        <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+        <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+      </div>
+      <button class="navbar-toggler" id="mobile-toggler" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<nav class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html">Home</a></li><li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="fabrics.html">Fabrics</a></li><li><a href="measurement-guide.html">Measurements</a></li>
+    <li><a href="alterations.html">Alterations</a></li><li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-controls">
+    <button class="ctrl-btn" data-theme-toggle aria-label="Toggle Dark Mode"><i class="bi bi-moon theme-icon"></i></button>
+    <button class="ctrl-btn" data-dir-toggle aria-label="Toggle RTL"><span class="ctrl-btn-label dir-label">RTL</span></button>
+    <a href="login.html" class="btn-nav-login"><i class="bi bi-person"></i> Login</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- BANNER -->
+<div class="page-banner">
+  <img src="assets/images/hero/contact-hero.png" alt="Tailor studio consultation area" class="page-banner-image" loading="eager" />
+  <div class="page-banner-overlay" aria-hidden="true"></div>
+  <div class="page-banner-content">
+    <div class="container">
+      <p class="page-banner-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span> Contact</p>
+      <h1 class="page-banner-title">Contact &amp; Book</h1>
+      <p class="page-banner-subtitle">Book an appointment, ask a question, or just say hello — we'd love to hear from you.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 — Book an Appointment -->
+<section aria-labelledby="contact-booking-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Book an Appointment</span>
+        <h2 class="section-title" id="contact-booking-heading">Start Your<br><em>Tailoring Journey</em></h2>
+        <p class="section-subtitle mx-auto">
+          Complete this form to request an appointment. We'll confirm your booking within 24 hours 
+          and send you everything you need to prepare for your visit.
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 fade-in">
+        <form class="form-card p-4 p-md-5" id="appointment-form" action="#" method="POST" novalidate aria-label="Appointment booking form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="contact-name"
+                name="name"
+                placeholder="Your full name"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input
+                type="tel"
+                class="form-control"
+                id="contact-phone"
+                name="phone"
+                placeholder="+91 98765 43210"
+                required
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="contact-email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-service">Service Required <span aria-hidden="true">*</span></label>
+              <div class="form-select-wrap">
+                <select class="form-control" id="contact-service" name="service" required>
+                  <option value="" disabled selected>Choose a service…</option>
+                  <optgroup label="Women's Tailoring">
+                    <option value="blouse">Blouse &amp; Kurta Stitching</option>
+                    <option value="salwar">Salwar Suit &amp; Anarkali</option>
+                    <option value="dress-womens">Dresses &amp; Skirts</option>
+                    <option value="occasion">Occasion &amp; Bridal Wear</option>
+                  </optgroup>
+                  <optgroup label="Men's Tailoring">
+                    <option value="suit">Bespoke Suit &amp; Blazer</option>
+                    <option value="shirt">Shirts &amp; Trousers</option>
+                    <option value="kurta">Kurta &amp; Sherwani</option>
+                  </optgroup>
+                  <optgroup label="Alterations">
+                    <option value="alteration-simple">Simple Alterations</option>
+                    <option value="alteration-complex">Complex Alterations</option>
+                  </optgroup>
+                  <option value="consultation">General Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+                <i class="bi bi-chevron-down form-select-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-date">Preferred Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="contact-date"
+                name="date"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-time">Preferred Time Slot</label>
+            <div class="form-radio-group" role="group" aria-label="Preferred time slots">
+              <label class="form-radio-label">
+                <input type="radio" name="time" value="morning" id="time-morning" /> Morning (9:30 – 12:00)
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="time" value="afternoon" id="time-afternoon" /> Afternoon (12:00 – 4:00)
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="time" value="evening" id="time-evening" /> Evening (4:00 – 7:00)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Additional Notes</label>
+            <textarea
+              class="form-control form-textarea"
+              id="contact-message"
+              name="message"
+              placeholder="Tell us about your garment idea, fabric preferences, occasion, or any special requirements…"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-info-box">
+            <i class="bi bi-info-circle form-info-icon" aria-hidden="true"></i>
+            <p class="form-info-text">This form sends a consultation request — not a direct booking. We will contact you within 24 hours to confirm your appointment and provide directions to our studio.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-100" id="contact-submit-btn">
+            <i class="bi bi-calendar3"></i> Request Appointment
+          </button>
+
+          <div class="form-success-msg" id="appointment-success-message" role="status" aria-live="polite">
+            <strong>Thank you!</strong> Your appointment request has been received. We'll contact you within 24 hours to confirm.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — Studio Information -->
+<section class="section-alt" aria-labelledby="contact-studio-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Studio Information</span>
+        <h2 class="section-title" id="contact-studio-heading">Visit Us in<br><em>Heritage Quarter</em></h2>
+        <p class="section-subtitle mx-auto">Our doors are open for consultations, fittings, fabric viewings, and bespoke discussions.</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-10 fade-in">
+        <div class="contact-info-card p-4 p-md-5">
+          <div class="row g-4">
+            <!-- Left Info Column -->
+            <div class="col-md-6">
+              <div class="contact-item mb-4">
+                <div class="contact-icon-wrap"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                <div>
+                  <div class="contact-item-label">Address</div>
+                  <div class="contact-item-value">
+                    12 Atelier Lane, Heritage Quarter<br>
+                    Chennai, Tamil Nadu 600001<br>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:var(--color-primary);display:inline-flex;align-items:center;gap:0.25rem;margin-top:0.35rem;">
+                      <i class="bi bi-map" aria-hidden="true"></i> Open in Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item mb-4">
+                <div class="contact-icon-wrap"><i class="bi bi-telephone" aria-hidden="true"></i></div>
+                <div>
+                  <div class="contact-item-label">Phone &amp; Hotline</div>
+                  <div class="contact-item-value">
+                    <a href="tel:+919876543210">+91 98765 43210</a><br>
+                    <a href="tel:+914423456789" style="font-size:0.85rem;">+91 44 2345 6789</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item mb-4">
+                <div class="contact-icon-wrap"><i class="bi bi-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <div class="contact-item-label">Email Support</div>
+                  <div class="contact-item-value">
+                    <a href="mailto:hello@threadandform.in">hello@threadandform.in</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-wrap"><i class="bi bi-whatsapp" aria-hidden="true"></i></div>
+                <div>
+                  <div class="contact-item-label">WhatsApp Quick Query</div>
+                  <div class="contact-item-value">
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">+91 98765 43210</a>
+                    <p style="font-size:0.8rem;margin-top:0.2rem;color:var(--color-muted);">Quick queries only. Available 9:30 AM – 7:00 PM.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Hours & Social Column -->
+            <div class="col-md-6">
+              <div class="contact-item-label mb-2">Opening Hours</div>
+              <table class="hours-table mb-4" role="table">
+                <tbody>
+                  <tr><td>Monday – Friday</td><td>9:30 AM – 7:00 PM</td></tr>
+                  <tr><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+                  <tr><td>Sunday</td><td>10:00 AM – 4:00 PM</td></tr>
+                  <tr><td>Public Holidays</td><td>Closed</td></tr>
+                </tbody>
+              </table>
+              <div class="form-info-box mb-4">
+                <i class="bi bi-info-circle form-info-icon" aria-hidden="true"></i>
+                <p class="form-info-text">Appointments are recommended for personalized attention. Walk-ins welcome based on atelier capacity.</p>
+              </div>
+              <div>
+                <div class="contact-item-label mb-2">Follow Our Atelier</div>
+                <div class="d-flex gap-2">
+                  <a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — Map -->
+<section class="section-alt" aria-labelledby="map-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title" id="map-heading">Visit Our<br><em>Studio</em></h2>
+        <p class="section-subtitle mx-auto">We are located in the heritage quarter of Chennai — easily accessible by auto, metro and private vehicle.</p>
+      </div>
+    </div>
+    <div class="fade-in">
+      <div class="map-placeholder" role="img" aria-label="Interactive map placeholder for Thread and Form Atelier location at 12 Atelier Lane, Heritage Quarter, Chennai">
+        <i class="bi bi-map" style="font-size:2.5rem;color:var(--color-muted);" aria-hidden="true"></i>
+        <p style="font-size:0.875rem;color:var(--color-muted);max-width:260px;text-align:center;line-height:1.6;">
+          Map loading... <br>12 Atelier Lane, Heritage Quarter, Chennai 600001
+        </p>
+        <a href="https://maps.google.com/?q=Heritage+Quarter+Chennai" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" id="map-directions-btn">
+          <i class="bi bi-map"></i> Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — What to Expect -->
+<section aria-labelledby="expect-heading">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center fade-in">
+        <span class="section-label">Your Visit</span>
+        <h2 class="section-title" id="expect-heading">What to Expect<br><em>at Your Appointment</em></h2>
+      </div>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-sm-6 col-lg-3 fade-in">
+        <div class="process-step h-100 p-4" style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+          <div class="process-step-num" style="font-family:var(--font-heading);font-size:2.25rem;color:var(--color-primary);margin-bottom:0.5rem;">01</div>
+          <h3 class="process-step-title" style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.4rem;">Warm Welcome</h3>
+          <p class="process-step-desc" style="font-size:0.875rem;color:var(--color-body);line-height:1.6;margin:0;">You'll be welcomed into our private consultation room. Refreshments offered while we discuss your vision.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-in">
+        <div class="process-step h-100 p-4" style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+          <div class="process-step-num" style="font-family:var(--font-heading);font-size:2.25rem;color:var(--color-primary);margin-bottom:0.5rem;">02</div>
+          <h3 class="process-step-title" style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.4rem;">Garment Discussion</h3>
+          <p class="process-step-desc" style="font-size:0.875rem;color:var(--color-body);line-height:1.6;margin:0;">We discuss your garment in detail — style, occasion, design preferences, and reference images.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-in">
+        <div class="process-step h-100 p-4" style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+          <div class="process-step-num" style="font-family:var(--font-heading);font-size:2.25rem;color:var(--color-primary);margin-bottom:0.5rem;">03</div>
+          <h3 class="process-step-title" style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.4rem;">Measurements &amp; Fabric</h3>
+          <p class="process-step-desc" style="font-size:0.875rem;color:var(--color-body);line-height:1.6;margin:0;">We record your precise body measurements and browse luxury fabrics together at your pace.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-in">
+        <div class="process-step h-100 p-4" style="background:var(--bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+          <div class="process-step-num" style="font-family:var(--font-heading);font-size:2.25rem;color:var(--color-primary);margin-bottom:0.5rem;">04</div>
+          <h3 class="process-step-title" style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-heading);margin-bottom:0.4rem;">Quote &amp; Timeline</h3>
+          <p class="process-step-desc" style="font-size:0.875rem;color:var(--color-body);line-height:1.6;margin:0;">We provide a clear price quote and realistic delivery timeline on the spot with zero hidden costs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — Contact CTA -->
+<section class="position-relative overflow-hidden" style="padding:7rem 0;" aria-labelledby="contact-cta-heading">
+  <img src="assets/images/cta/contact-cta.png" alt="Tailor studio consultation area" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy" aria-hidden="true" />
+  <div class="overlay-dark" aria-hidden="true"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <span class="section-label" style="color:rgba(245,239,230,0.65);">Visit Our Studio</span>
+        <h2 id="contact-cta-heading" style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3.25rem);color:#F5EFE6;margin-bottom:1rem;">
+          Ready to Start<br><em>Your Custom Garment?</em>
+        </h2>
+        <p style="color:rgba(245,239,230,0.75);font-size:1rem;max-width:460px;margin:0 auto 2rem;line-height:1.75;">
+          Call us directly at +91 98765 43210 or visit our studio in Heritage Quarter, Chennai. 
+          Walk-ins are welcome, appointments are preferred.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#appointment-form" class="btn btn-white btn-lg" id="contact-cta-book-btn">
+            <i class="bi bi-calendar3"></i> Request Appointment
+          </a>
+          <a href="tel:+919876543210" class="btn btn-outline-white btn-lg" id="contact-cta-call-btn">
+            <i class="bi bi-telephone"></i> Call Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand-group footer-brand-group" aria-label="Thread and Form Atelier — Home">
+          <img src="assets/images/common/logo.svg" alt="Thread and Form Atelier logo" class="brand-logo" width="40" height="40" />
+          <span class="brand-text">
+            <span class="brand-name">Thread &amp; Form Atelier</span>
+            <span class="brand-tagline">TAILORED TO FIT. MADE TO LAST.</span>
+          </span>
+        </a><p class="footer-about">A bespoke tailoring studio dedicated to the art of custom stitching.</p><div class="footer-social"><a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" class="footer-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></div></div>
+      <div><h2 class="footer-col-title">Services</h2><ul class="footer-nav-list"><li><a href="services.html">Women's Tailoring</a></li><li><a href="services.html">Men's Tailoring</a></li><li><a href="services.html">Occasion &amp; Bridal</a></li><li><a href="alterations.html">Garment Alterations</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
+      <div><h2 class="footer-col-title">Quick Links</h2><ul class="footer-nav-list"><li><a href="about.html">About the Atelier</a></li><li><a href="fabrics.html">Fabric Collection</a></li><li><a href="measurement-guide.html">Measurements</a></li><li><a href="login.html">Client Login</a></li><li><a href="signup.html">Create Account</a></li></ul></div>
+      <div><h2 class="footer-col-title">Studio</h2><div class="footer-studio-item"><i class="bi bi-geo-alt footer-studio-icon"></i><p class="footer-studio-text">12 Atelier Lane, Heritage Quarter<br>Chennai 600001</p></div><div class="footer-studio-item"><i class="bi bi-telephone footer-studio-icon"></i><p class="footer-studio-text">+91 98765 43210</p></div><div class="footer-studio-item"><i class="bi bi-envelope footer-studio-icon"></i><p class="footer-studio-text">hello@threadandform.in</p></div><div class="footer-hours mt-3"><div class="footer-hours-row"><span class="footer-hours-day">Mon – Sat</span><span class="footer-hours-time">9:30 AM – 7:00 PM</span></div><div class="footer-hours-row"><span class="footer-hours-day">Sunday</span><span class="footer-hours-time">10:00 AM – 4:00 PM</span></div></div></div>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Thread &amp; Form Atelier. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

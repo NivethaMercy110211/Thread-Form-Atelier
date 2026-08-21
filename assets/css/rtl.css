@@ -1,0 +1,348 @@
+/* ============================================================
+   Thread & Form Atelier — rtl.css
+   Full RTL layout direction overrides (dir="rtl")
+   ============================================================ */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ---- Navigation RTL ---- */
+[dir="rtl"] .navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---- Brand Group RTL ---- */
+[dir="rtl"] .navbar-brand-group,
+[dir="rtl"] .footer-brand-group,
+[dir="rtl"] .auth-image-content .navbar-brand-group,
+[dir="rtl"] .auth-mobile-brand {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+[dir="rtl"] .brand-text,
+[dir="rtl"] .footer-brand-group .brand-text,
+[dir="rtl"] .auth-image-content .brand-text,
+[dir="rtl"] .auth-mobile-brand .brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: right !important;
+  gap: 2px !important;
+}
+
+[dir="rtl"] .brand-name,
+[dir="rtl"] .footer-brand-name,
+[dir="rtl"] .brand-tagline,
+[dir="rtl"] .footer-brand-tagline {
+  text-align: right !important;
+}
+
+@media (min-width: 1200px) {
+  [dir="rtl"] .navbar-nav-center {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  [dir="rtl"] .navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  [dir="rtl"] .navbar-nav-center,
+  [dir="rtl"] .navbar-controls {
+    display: none !important;
+  }
+}
+
+[dir="rtl"] .nav-item-link.active::after {
+  left: 0.75rem;
+  right: 0.75rem;
+}
+
+[dir="rtl"] .nav-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* Mobile Nav Drawer RTL Fix */
+[dir="rtl"] .mobile-nav-drawer {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  text-align: right;
+  transform: translateX(100%);
+}
+
+[dir="rtl"] .mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .mobile-nav-list li a {
+  text-align: right;
+  border-left: none;
+  border-right: 3px solid transparent;
+}
+
+[dir="rtl"] .mobile-nav-list li a.active {
+  border-left: none;
+  border-right: 3px solid var(--color-primary);
+  padding-left: 1rem;
+  padding-right: 1.15rem;
+}
+
+[data-theme="dark"][dir="rtl"] .mobile-nav-list li a.active {
+  border-left: none;
+  border-right-color: #AABBAF;
+}
+
+[dir="rtl"] .mobile-nav-controls {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  justify-content: flex-start;
+}
+
+/* ---- Hero RTL ---- */
+[dir="rtl"] .hero-overlay {
+  background: linear-gradient(
+    -110deg,
+    rgba(21,25,23,0.80) 0%,
+    rgba(38,60,53,0.55) 50%,
+    rgba(21,25,23,0.25) 100%
+  );
+}
+
+[dir="rtl"] .hero-label {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-label::before {
+  display: none;
+}
+
+[dir="rtl"] .hero-label::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(245,239,230,0.55);
+}
+
+[dir="rtl"] .hero-cta-group {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-split {
+  grid-template-columns: 1fr 1fr;
+}
+
+[dir="rtl"] .hero-split-content {
+  order: 2;
+}
+
+[dir="rtl"] .hero-split-image {
+  order: 1;
+}
+
+/* ---- Section Labels / Thread Ornament RTL ---- */
+[dir="rtl"] .thread-ornament {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .thread-ornament::before {
+  display: none;
+}
+
+[dir="rtl"] .thread-ornament::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ---- Split Sections RTL ---- */
+[dir="rtl"] .split-section {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .split-content {
+  text-align: right;
+}
+
+/* ---- Cards RTL ---- */
+[dir="rtl"] .card-footer-area {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .service-list li {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .service-card-horizontal {
+  flex-direction: row-reverse;
+}
+
+/* ---- Process Steps RTL ---- */
+[dir="rtl"] .process-step {
+  text-align: right;
+}
+
+/* ---- Forms RTL ---- */
+[dir="rtl"] .form-row {
+  direction: rtl;
+}
+
+[dir="rtl"] .form-radio-group {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-options-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .form-select-wrap::after {
+  right: auto;
+  left: 1rem;
+}
+
+/* ---- Filter Buttons RTL ---- */
+[dir="rtl"] .filter-group {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* ---- Footer RTL ---- */
+[dir="rtl"] .site-footer {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-top {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+[dir="rtl"] .footer-studio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: right;
+}
+
+[dir="rtl"] .footer-social {
+  display: flex;
+  gap: 0.6rem;
+}
+
+[dir="rtl"] .footer-nav-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+[dir="rtl"] .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+[dir="rtl"] .footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ---- Buttons RTL ---- */
+[dir="rtl"] .btn-link:hover .btn-link-arrow {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---- Studio Info RTL ---- */
+[dir="rtl"] .studio-info-item {
+  display: flex;
+  gap: 1rem;
+}
+
+[dir="rtl"] .studio-info-item .studio-info-content {
+  text-align: right;
+}
+
+/* ---- Measurement Cards RTL ---- */
+[dir="rtl"] .measure-card {
+  text-align: right;
+}
+
+/* ---- Team Cards RTL ---- */
+[dir="rtl"] .team-card-body {
+  text-align: right;
+}
+
+/* ---- FAQ RTL ---- */
+[dir="rtl"] .faq-question-wrap {
+  flex-direction: row-reverse;
+}
+
+/* ---- Auth RTL ---- */
+[dir="rtl"] .auth-controls {
+  right: auto;
+  left: 1.5rem;
+}
+
+[dir="rtl"] .auth-social-buttons .btn-social {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-remember {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-options-row {
+  flex-direction: row-reverse;
+}
+
+/* ---- Turnaround Cards RTL ---- */
+[dir="rtl"] .turnaround-card {
+  text-align: right;
+}
+
+/* ---- Fabric Meta RTL ---- */
+[dir="rtl"] .fabric-meta {
+  direction: rtl;
+}
+
+/* ---- Before/After Label RTL ---- */
+[dir="rtl"] .before-after-label {
+  left: auto;
+  right: 0.75rem;
+}
+
+/* ---- CTA Section RTL ---- */
+[dir="rtl"] .cta-content {
+  text-align: center;
+}
+
+/* ---- Page Banner Breadcrumb RTL ---- */
+[dir="rtl"] .page-banner-breadcrumb {
+  flex-direction: row-reverse;
+}

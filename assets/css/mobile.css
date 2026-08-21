@@ -1,0 +1,507 @@
+/* ============================================================
+   Thread & Form Atelier — mobile.css
+   Mobile-first overrides (360px – 767px)
+   ============================================================ */
+
+@media (max-width: 767.98px) {
+  /* ---- Root / Typography ---- */
+  :root {
+    --section-py: 3.5rem;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  /* ---- Navbar ---- */
+  .navbar-inner {
+    padding: 0 1rem;
+    height: 62px;
+  }
+
+  .mobile-nav-drawer {
+    top: 62px;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    gap: 2px;
+  }
+
+  .brand-tagline {
+    display: block !important;
+    font-size: 0.52rem !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+  }
+
+  .brand-name {
+    font-size: 1.05rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+  }
+
+  .brand-logo {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Keep paired service-list rows aligned when labels wrap. */
+  .service-list li {
+    align-items: flex-start;
+    min-height: 2.8rem;
+  }
+
+  .service-list li::before {
+    margin-top: 0.58rem;
+  }
+
+  /* ---- Universal Mobile One-by-One Grid Stacking (360px – 767px) ---- */
+  .row > [class*="col-"],
+  .cards-grid-2,
+  .cards-grid-3,
+  .cards-grid-4,
+  .craft-value-grid > [class*="col-"],
+  .craft-images-row > [class*="col-"],
+  .measurement-body-grid,
+  .stats-row,
+  .bento-grid-5,
+  .alteration-results-grid,
+  .why-us-grid,
+  .fabrics-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cards-grid-3 > *,
+  .cards-grid-3 > *:last-child:nth-child(odd),
+  .cards-grid-4 > *:last-child:nth-child(odd),
+  .bento-grid-5 > *:last-child:nth-child(odd),
+  .measurement-body-grid > *:last-child:nth-child(odd),
+  .alteration-results-grid > *:last-child:nth-child(odd),
+  .why-us-grid > *:last-child:nth-child(odd),
+  .fabrics-grid > *:last-child:nth-child(odd),
+  .transformation-card:last-child:nth-child(odd),
+  .atelier-space-main,
+  .atelier-space-aside,
+  .about-page .row > .atelier-space-main,
+  .about-page .row > .atelier-space-aside,
+  .row > [class*="col-lg-4"]:last-child:nth-child(odd),
+  .row > [class*="col-md-4"]:last-child:nth-child(odd) {
+    grid-column: auto !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  .tailoring-service-grid > .col-6 + .col-6 .service-list {
+    margin-top: 0;
+  }
+
+  #fabrics-explore-btn {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .home2-page .h2-split-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .home2-page .h2-stat-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .home2-page .h2-stat-item:last-child {
+    border-bottom: 0;
+  }
+
+  .home2-page section .section-label,
+  .home2-page section .section-title {
+    display: block;
+    text-align: center;
+  }
+
+  .home2-page .h2-precision-copy {
+    text-align: center;
+  }
+
+  .home2-page .h2-precision-copy > .d-flex.flex-column > .d-flex {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .home2-page #h2-measure-guide-btn {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .home2-page .h2-fabric-desc {
+    height: 7em;
+  }
+
+  .about-page section .section-label,
+  .about-page section .section-title {
+    display: block;
+    text-align: center;
+  }
+
+  .about-page .about-story-copy,
+  .about-page .team-heading-copy {
+    text-align: center;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    min-height: 60vh;
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .hero-stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(245,239,230,0.12);
+    padding: 1rem 1.25rem;
+  }
+
+  .hero-stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* ---- Page Banner ---- */
+  .page-banner {
+    min-height: 220px;
+  }
+
+  .page-banner-content {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .page-banner-title {
+    font-size: 1.85rem;
+  }
+
+  .page-banner-subtitle {
+    font-size: 0.875rem;
+  }
+
+  /* ---- Sections & Headings ---- */
+  .section-label,
+  .hero-label,
+  .hero-label-dark,
+  .page-banner-label,
+  .badge-tag,
+  .guide-badge-tag {
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .section-label::before,
+  .hero-label-dark::before {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .section-title,
+  .hero-title,
+  .h2-split-title,
+  .page-banner-title,
+  .section-subtitle,
+  .page-banner-subtitle,
+  .hero-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ---- Cards ---- */
+  .cards-grid-2,
+  .cards-grid-3,
+  .cards-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .service-card-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  .service-card-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .service-card-footer {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .service-card-footer .tag {
+    align-self: center;
+  }
+
+  .why-card-desc {
+    height: 7em;
+  }
+
+  .services-faq-section .section-label,
+  .services-faq-section .section-title {
+    display: block;
+    text-align: center;
+  }
+
+  .before-measure-section .section-label,
+  .before-measure-section .section-title {
+    display: block;
+    text-align: center;
+  }
+
+  /* Horizontal cards become vertical on mobile */
+  .service-card-horizontal {
+    flex-direction: column;
+  }
+
+  .service-card-horizontal-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .service-card-horizontal-body {
+    padding: 1.25rem;
+  }
+
+  /* ---- Process Steps ---- */
+  .process-step {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* ---- Forms ---- */
+  .form-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Filter Buttons ---- */
+  .filter-group {
+    gap: 0.4rem;
+  }
+
+  .btn-filter {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    padding-top: 3rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  /* ---- Auth ---- */
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-image-panel {
+    display: none;
+  }
+
+  .auth-form-panel {
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+
+  .auth-inner {
+    max-width: 100%;
+  }
+
+  .auth-brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .auth-title {
+    font-size: 1.65rem;
+  }
+
+  /* ---- CTA ---- */
+  .cta-section {
+    padding: 3rem 0;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Fabric Cards ---- */
+  .fabric-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ---- Before/After ---- */
+  .before-after-card .before-after-images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ---- Turnaround Grid ---- */
+  .turnaround-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Measurement Steps ---- */
+  .measurement-body-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---- Team Grid ---- */
+  .team-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---- Statistics Row ---- */
+  .stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* ---- Timeline ---- */
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- No horizontal overflow ---- */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Touch targets minimum 44px */
+  .btn-md, .btn-lg {
+    min-height: 44px;
+  }
+
+  .ctrl-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* ---- Extra small (360px) ---- */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .page-banner-title {
+    font-size: 1.6rem;
+  }
+
+  .navbar-inner {
+    padding: 0 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.78rem;
+  }
+}
