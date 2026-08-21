@@ -335,6 +335,11 @@ input[type="time"]:focus {
   line-height: 1.6;
 }
 
+/* Keep the contact form action visually separate from the notice above it. */
+#contact-submit-btn {
+  margin-top: 1rem;
+}
+
 /* ---- Studio Info Card ---- */
 .studio-info-card {
   background: var(--bg-card);

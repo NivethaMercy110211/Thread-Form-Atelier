@@ -29,6 +29,12 @@
   user-select: none;
 }
 
+.btn i,
+.btn span,
+.btn svg {
+  color: inherit;
+}
+
 .btn:active {
   transform: translateY(1px);
 }
@@ -98,6 +104,7 @@
 
 [data-theme="dark"] .btn-outline-primary:hover {
   background: #AABBAF;
+  border-color: #AABBAF;
   color: #151917;
 }
 
@@ -115,6 +122,17 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
+[data-theme="dark"] .btn-white {
+  background: rgba(245,239,230,0.95);
+  color: #151917;
+}
+
+[data-theme="dark"] .btn-white:hover {
+  background: #ffffff;
+  color: #151917;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
 /* ---- White Outline (on dark/image backgrounds) ---- */
 .btn-outline-white {
   background: transparent;
@@ -126,6 +144,17 @@
   background: rgba(245,239,230,0.12);
   border-color: rgba(245,239,230,0.8);
   color: #F5EFE6;
+}
+
+[data-theme="dark"] .btn-outline-white {
+  color: #F5EFE6;
+  border-color: rgba(245,239,230,0.5);
+}
+
+[data-theme="dark"] .btn-outline-white:hover {
+  background: #F5EFE6;
+  border-color: #F5EFE6;
+  color: #151917;
 }
 
 /* ---- Ghost Button ---- */
@@ -256,10 +285,17 @@
 [data-theme="dark"] .btn-filter:hover {
   border-color: #AABBAF;
   color: #AABBAF;
+  background: rgba(170, 187, 175, 0.08);
 }
 
 [data-theme="dark"] .btn-filter.active {
   background: #AABBAF;
   border-color: #AABBAF;
+  color: #151917;
+}
+
+[data-theme="dark"] .btn-filter.active:hover {
+  background: #c5d1c5;
+  border-color: #c5d1c5;
   color: #151917;
 }

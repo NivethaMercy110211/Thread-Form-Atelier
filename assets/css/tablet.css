@@ -45,11 +45,17 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  main section .btn {
+  main section .btn:only-child {
     display: flex;
     width: max-content;
     max-width: 100%;
     margin-inline: auto;
+  }
+
+  main section .btn {
+    display: inline-flex;
+    width: max-content;
+    max-width: 100%;
   }
 
   main section .btn-link {
@@ -75,8 +81,15 @@
 
   /* Footer */
   .footer-top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 2rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem 2rem;
+    }
   }
 
   /* Split sections */
@@ -358,9 +371,35 @@
     margin-right: auto !important;
   }
 
+  /* ---- CTA & Banner Button Groups (768px – 1024px) ---- */
+  .hero-cta-group,
+  .cta-buttons,
+  .cta-section .d-flex,
+  .d-flex:has(> .btn + .btn),
+  .d-flex.justify-content-center {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+
+  .hero-cta-group .btn,
+  .cta-buttons .btn,
+  .cta-section .d-flex .btn,
+  .d-flex:has(> .btn + .btn) .btn,
+  .d-flex.justify-content-center .btn {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-inline: 0 !important;
+  }
+
   /* ---- Single Section Button Centering (768px – 1024px) ---- */
   section .d-flex:has(> .btn:only-child),
-  section .d-flex.justify-content-center,
   .section-footer,
   .section-cta {
     display: flex !important;
@@ -374,7 +413,6 @@
   section .btn:only-child,
   #fabrics-explore-btn,
   #h2-measure-guide-btn,
-  #svc-cta-measure-btn,
   #alt-measure-btn {
     display: flex !important;
     margin-left: auto !important;

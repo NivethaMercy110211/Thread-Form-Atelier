@@ -110,7 +110,7 @@
 
 .auth-image-quote {
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-style: italic;
   font-weight: 300;
   color: #F5EFE6;
@@ -320,6 +320,7 @@
 [data-theme="dark"] .btn-social:hover {
   background: #252f2a;
   border-color: #3a4a42;
+  color: #F5EFE6;
 }
 
 .social-icon {
