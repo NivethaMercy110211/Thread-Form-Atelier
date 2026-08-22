@@ -322,7 +322,6 @@
   color: var(--color-heading);
   font-weight: 400;
   line-height: 1.2;
-  min-height: 2.4em;
 }
 
 .turnaround-time > span {
@@ -334,7 +333,6 @@
   color: var(--color-body);
   line-height: 1.6;
   margin-bottom: 0;
-  min-height: 8em;
 }
 
 /* ---- Process Step Card ---- */
