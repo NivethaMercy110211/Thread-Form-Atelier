@@ -199,13 +199,14 @@
 
   .hero-stats {
     grid-template-columns: 1fr;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
   }
 
   .hero-stat-item {
     border-right: none;
     border-bottom: 1px solid rgba(245,239,230,0.12);
-    padding: 1rem 1.25rem;
+    min-height: 72px;
+    padding: 0.75rem 1rem;
   }
 
   .hero-stat-item:last-child {
