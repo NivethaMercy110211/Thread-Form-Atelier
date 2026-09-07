@@ -227,7 +227,7 @@
 /* ---- Auth Header ---- */
 .auth-header {
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: center !important;
 }
 
 .auth-title {
@@ -236,7 +236,7 @@
   font-weight: 400;
   color: var(--color-heading);
   margin-bottom: 0.4rem;
-  text-align: center;
+  text-align: center !important;
 }
 
 .auth-subtitle {
