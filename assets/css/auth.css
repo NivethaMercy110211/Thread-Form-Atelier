@@ -236,6 +236,7 @@
   font-weight: 400;
   color: var(--color-heading);
   margin-bottom: 0.4rem;
+  text-align: center;
 }
 
 .auth-subtitle {
