@@ -216,10 +216,12 @@
   /* ---- Page Banner ---- */
   .page-banner {
     min-height: 220px;
+    align-items: center;
+    justify-content: center;
   }
 
   .page-banner-content {
-    padding: 3rem 0 2.5rem;
+    padding: 2.5rem 0;
   }
 
   .page-banner-title {

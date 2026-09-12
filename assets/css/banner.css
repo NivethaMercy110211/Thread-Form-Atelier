@@ -149,7 +149,8 @@
   position: relative;
   min-height: 330px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   background-color: var(--color-primary);
   padding: 0 !important;
@@ -179,7 +180,7 @@
 .page-banner-content {
   position: relative;
   z-index: 2;
-  padding: 3.8rem 0 3.2rem;
+  padding: 3.5rem 0;
   width: 100%;
   text-align: center;
 }
@@ -190,6 +191,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(245, 239, 230, 0.6);
+  margin-top: 0;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -216,6 +218,7 @@
   font-weight: 400;
   color: #F5EFE6;
   line-height: 1.15;
+  margin-top: 0;
   margin-bottom: 0.75rem;
 }
 

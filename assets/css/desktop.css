@@ -76,13 +76,4 @@
     letter-spacing: -0.05em;
   }
 }
-@media (min-width: 1200px) {
-  .home2-page .h2-fabric-heading-row {
-    align-items: flex-start !important;
-  }
 
-  .home2-page .h2-fabric-intro {
-    margin-top: 1.8125rem;
-    padding-bottom: 0;
-  }
-}
